@@ -1,5 +1,9 @@
+const fs = require("fs");
+const filesize = require("file-size");
 module.exports = (function (eleventyConfig) {
     eleventyConfig.addFilter("filesize", function (path) {
-        return "0 KB";
+        let stat = fs.statSync(path); if (stat) {
+            return filesize(stat.size).human();
+        } return "";
     });
 });
