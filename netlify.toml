@@ -1,4 +1,3 @@
 [build]
     command = "eleventy"
     publish = "_site"
-    base = "_src"
