@@ -20,4 +20,15 @@ module.exports = (function (eleventyConfig) {
         "css" // css is not yet a recognized template extension in Eleventy
     ]);
 
+    // Static assets to pass through
+    eleventyConfig.addPassthroughCopy("./_src/assets");
+    return {
+        dir: {
+            input: '_src',
+            includes: "_src/_includes",
+            output: '_site' 
+        },
+        passthroughFileCopy: true
+    };
+
 });
