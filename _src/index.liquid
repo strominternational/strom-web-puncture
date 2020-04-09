@@ -2,7 +2,7 @@
 title: "STRØM . People Product Process"
 images:
 - partyparrot.gif
-heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
+heroimage: "https://source.unsplash.com/collection/620551/1600x1200"
 ---
 
 <!doctype html>
@@ -10,10 +10,11 @@ heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
 
 <head>
     <meta charset="utf-8">
-    <title>{{ title }} . User experience and digital product design consulting ...</title>
+    <title>{{ title }} . User experience research and digital product design consulting ...</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163175793-1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -46,7 +47,7 @@ heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
                 <path
                     d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
             </svg> -->
-            <span class="font-bold text-2xl tracking-tight text-white" style="color: #FFFF00;">{{ title }}</span>
+            <span class="font-bold text-2xl tracking-tight text-yellow-400"><a href=".">{{ title }}</a></span>
         </div>
         <!-- <div class="block lg:hidden">
             <button
@@ -77,33 +78,34 @@ heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
             </div>
         </div> -->
     </nav>
-    <div id="heroimage" class="flex flex-col justify-center w-full h-full object-cover bg-gray-400 p-12 bg-center"
-        style="min-height:70vh;background-image:url({{heroimage}});">
-        <h1 class="text-6xl text-center text-white font-black m-3"><mark>Hello, we are STRØM. Care to ship value?</mark>
+    <div id="heroimage"
+        class="heroimage flex flex-col justify-center w-full h-screen bg-no-repeat bg-cover bg-gray-400 p-12 bg-center"
+        style="margin-top:-68px;background-image:url({{heroimage}});">
+        <h1 class="text-6xl text-center text-white font-black m-3"><mark
+                class="border-r-4 border-l-4 border-yellow-400">Hello, we are STRØM. Care to ship value?</mark>
             </Hello>
         </h1>
-        <p class="max-w-4xl mx-auto text-center text-white text-2xl font-bold m-1"><mark>We enable you to build the
-                right things first. User centric and research driven.</mark></p>
-        <form netlify class="flex flex-col content-center max-w-sm mx-auto pt-12">
-            <!-- <div class="flex items-center border-b border-b-2 border-yellow-500 py-2"> -->
-            <!-- <input
+        <h2 class="max-w-4xl mx-auto text-center text-white text-2xl font-bold m-1"><mark>We enable you to build the
+                right things first. User centric and data driven.<br>User experience research and product design
+                consulting.</mark></h2>
+        <!-- <div class="flex items-center border-b border-b-2 border-yellow-500 py-2"> -->
+        <!-- <input
                     class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                     type="text" placeholder="Jane Doe" aria-label="Full name"> -->
-            <button
-                class="shadow-2xl uppercase bg-black hover:bg-yellow-400 border-black hover:border-yellow-400 text-lg border-4 font-semibold text-yellow-400 hover:text-black py-2 px-6"
-                type="button">
-                Learn 🚀 what to build next ...
-            </button>
-            <!-- <button
+        <a href="#letstalk"
+            class="max-w-sm mx-auto mt-12 shadow-2xl uppercase bg-black hover:bg-yellow-400 border-black hover:border-yellow-400 text-lg border-4 font-semibold text-white hover:text-black py-2 px-6"
+            type="button">
+            Discover what to build next 🚀
+        </a>
+        <!-- <button
                     class="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded"
                     type="button">
                     Cancel
                 </button> -->
-            <!-- </div> -->
-        </form>
+        <!-- </div> -->
     </div>
 
-    <div class="m-4 mx-auto center max-w-3xl bg-gray-300 text-gray-700 px-4 py-3 relative" role="alert">
+    <!-- <div class="m-4 mx-auto center max-w-3xl bg-gray-300 text-gray-700 px-4 py-3 relative" role="alert">
         <strong class="font-bold">Your users love you.</strong>
         <span class="block sm:inline">Oh yeah! 🥳</span>
         <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
@@ -114,6 +116,49 @@ heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
                     d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
             </svg>
         </span>
+    </div> -->
+
+    <!-- Modals -->
+
+    <div class="modal opacity-0 invisible transition duration-300 ease-out fixed h-full w-full flex top-0 left-0"
+        id="letstalk">
+        <div class="max-w-screen-md flex flex-col items-center z-50 m-auto p-8 bg-gray-100">
+            <h2 class="text-4xl font-bold">May we cøntact you?</h2>
+            <p class="text-lg font-medium p-4 text-center">Our belief is, in order to build the right things the
+                right way, we need a thorough understanding of our users. Product design decisions should be
+                based on research. We enable you to ship added value.</p>
+            <form action="#close" name="website contact" method="POST" data-netlify="true" class="pt-4 w-full flex-col">
+                <div class="flex width-full -mx-3">
+                    <div class="w-full md:w-1/2 px-3 md:mb-0">
+                        <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2" for="grid-name">
+                            Name
+                        </label>
+                        <input
+                            class="placeholder-white appearance-none block w-full bg-black text-white font-medium border border-black py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-black"
+                            id="grid-name" type="text" placeholder="Who are you?">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3 md:mb-0">
+                        <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2" for="grid-name">
+                            Phone / Email
+                        </label>
+                        <input
+                            class="placeholder-white appearance-none block w-full bg-black text-white font-medium border border-black py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-black"
+                            id="grid-mail" type="text" placeholder="How can we reach you?">
+                    </div>
+                </div>
+                <button
+                    class="align-center mt-3 flex mx-auto uppercase bg-yellow-400 hover:bg-black border-yellow-400 hover:border-black text-md border-4 font-semibold text-black hover:text-yellow-400 py-2 px-6"
+                    type="submit" value="Please contact me within 24 hours ...">
+                    We'll contact you within 24 hours ...
+                </button>
+            </form>
+            <p class="text-sm text-gray-600 font-medium p-4 mt-5 text-center">You also reach us under ‭<a
+                    href="tel:+49-174-3235390">+49
+                    174 3235390‬ (Fåbian)</a> and <a href="+49-173-9115205">+49 173 9115205 (Jønas)</a>. <br> With ❤️
+                from Hamburg. </p>
+            <!-- <a href="#close" class="close">CLOSE</a> -->
+        </div>
+        <a href="#close" class="background"></a>
     </div>
 
     <!-- Hotjar Tracking Code for strom.international -->
