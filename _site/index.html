@@ -25,111 +25,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body {
-            font-weight: 600;
-        }
-
-        #header {
-            display: block;
-            background: rgb(0, 0, 0);
-            background: linear-gradient(172deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.32815132889093135) 25%, rgba(0, 0, 0, 0) 100%);
-            /* background: none; */
-            position: fixed;
-            padding: 16px;
-            padding-left: 22px;
-            z-index: 100;
-        }
-
+    <style type="text/css">
         #hero {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
             background-image:url('https://source.unsplash.com/collection/620551/1920x1080');
         }
-
-        #logo {
-            /* font-size: 2.5rem; */
-            display: inline-block;
-            margin: 0;
-            color: #FFFF00;
-            text-decoration: none;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 800;
-        }
-
-        mark {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
-        }
-
-        #hero-title {
-            /* font-size: 6rem; */
-        }
-
-        #hero-subtitle {
-            /* font-size: 2.5rem; */
-        }
-
-        #hero-content {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .col {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-        }
-
-        .modal .background {
-            display: block;
-            background-color: rgba(0, 0, 0, 0.7);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
-        .modal:target {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .button {
-            display: inline-block;
-            box-sizing: content-box;
-            border-radius: 0;
-            background: black;
-            border: 1px solid black;
-            color: white;
-            font-size: 1.5rem;
-            margin: 20px;
-            padding: 5px 15px;
-        }
-
-        .button:hover {
-            background: #FFFF00;
-            border: 1px solid #FFFF00;
-            color: black;
-        }
-
-        .invisible {
-            /* display: none; */
-            opacity: 0;
-            visibility: hidden;
-        }
     </style>
-
     <!-- Favicon
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -178,7 +78,7 @@
                     <h1 id="hero-title"><mark>Hello, we are STRØM. Users love you?</mark></h1>
                     <h5><mark id="hero-subtitle">Build the right things right. User centric and research
                             driven.</mark></h2>
-                        <a href="#modal" class="button" type="button" submit="Submit">
+                        <a href="#letstalk" class="button" type="button">
                             Learn 🚀 what to build next ...
                         </a>
                 </div>
@@ -191,8 +91,8 @@
         <!-- Modals
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <div class="modal invisible" id="letstalk">
-            <div class="max-w-screen-md flex flex-col items-center z-50 m-auto p-8 bg-gray-100">
-                <h2 class="text-4xl font-bold">Do you want to talk?</h2>
+            <div class="modal-content">
+                <h3>Do you want to talk?</h3>
                 <p class="text-lg font-medium p-4 text-center">Our belief is, in order to build the right things the
                     right way, we need a thorough understanding of our users. Product design decisions should be
                     based on research. We enable you to ship added value.</p>
