@@ -89,7 +89,7 @@ mark {
 }
 .modal-content {
   display: flex;
-  width: 650px;
+  max-width: 560px;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -129,10 +129,16 @@ form label {
   font-size: small;
 }
 
+form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 input[type="text"] {
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-weight: 400;
-  padding: 5px 15px 5px 15px;
+  padding: 15px;
   border: 1px solid lightgray;
   background-color: lightgray;
   border-radius: 0 !important;
