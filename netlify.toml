@@ -1,4 +1,3 @@
 [build]
-    base ="_src"
     command = "eleventy"
     publish = "_site"
