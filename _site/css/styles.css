@@ -11,7 +11,6 @@ body {
     rgba(0, 0, 0, 0.32815132889093135) 25%,
     rgba(0, 0, 0, 0) 100%
   );
-  /* background: none; */
   position: fixed;
   padding: 16px;
   padding-left: 22px;
@@ -26,7 +25,6 @@ body {
 }
 
 #logo {
-  /* font-size: 2.5rem; */
   display: inline-block;
   margin: 0;
   color: #ffff00;
@@ -47,14 +45,6 @@ mark {
   padding-right: 0.5rem;
 }
 
-#hero-title {
-  /* font-size: 6rem; */
-}
-
-#hero-subtitle {
-  /* font-size: 2.5rem; */
-}
-
 #hero-content {
   flex-direction: column;
   align-items: center;
@@ -69,7 +59,6 @@ mark {
 .modal {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.22s ease-out;
   transition: 0.22s ease-out;
   position: fixed;
   height: 100%;
@@ -101,7 +90,6 @@ mark {
 .modal:target {
   opacity: 1;
   visibility: visible;
-  /* display: block; */
 }
 .button:focus,
 .button {
@@ -115,6 +103,7 @@ mark {
   margin: auto;
   margin-top: 20px;
   padding: 5px 20px;
+  transition: 0.11s ease-out;
 }
 
 .button:hover {
@@ -143,7 +132,7 @@ input[type="text"] {
   background-color: lightgray;
   border-radius: 0 !important;
 }
-input[type="text"]:focus{
+input[type="text"]:focus {
   border-color: #ffff00;
   background-color: #ffff00;
 }
