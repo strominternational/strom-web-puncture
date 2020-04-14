@@ -103,7 +103,7 @@ mark {
   margin: auto;
   margin-top: 20px;
   padding: 5px 20px;
-  transition: 0.11s ease-out;
+  transition: 0.125s ease-out;
 }
 
 .button:hover {
