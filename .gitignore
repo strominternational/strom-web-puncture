@@ -1,6 +1,5 @@
 # Ignore installed npm modules
 node_modules/
-report/
 
 # Ignore build tool output, e.g. code coverage – Taken from 11ty gitignore file!
 # .nyc_output/
