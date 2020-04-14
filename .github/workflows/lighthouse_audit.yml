@@ -1,5 +1,5 @@
 name: Lighthouse audit on pull request
-on: pull_request
+on: push
 
 jobs:
   audit:

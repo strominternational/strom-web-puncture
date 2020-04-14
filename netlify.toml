@@ -1,3 +1,8 @@
 [build]
-    command = "eleventy"
-    publish = "_site"
+command = "eleventy"
+publish = "_site"
+
+[[plugins]]
+# package = "netlify-plugin-checklinks"
+package = "netlify-plugin-subfont"
+# package = "netlify-plugin-cypress"
