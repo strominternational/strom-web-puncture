@@ -19,19 +19,20 @@ mark {
 #header {
   display: block;
   text-align: left;
-  background: rgb(0, 0, 0);
+  /* background: rgb(0, 0, 0);
   background: linear-gradient(
     172deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0.32815132889093135) 25%,
     rgba(0, 0, 0, 0) 100%
-  );
+  ); */
   position: fixed;
   padding: 16px 16px 16px 22px; 
   z-index: 100;
 }
 
 .container {
+  margin-top: 29vh;
   z-index: 2;
 }
 
@@ -46,7 +47,7 @@ mark {
 #hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   height: 100vh;
 }
 
@@ -105,11 +106,11 @@ mark {
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  font-size: 3.33rem;
+  font-size: 3rem;
   /* width: 33.33vw; */
   /* height: min-content; */
   font-weight: 800;
-  line-height: 3.99rem;
+  line-height: 3.66rem;
   /* height: 4rem; */
   /* word-wrap: break-word; */
   /* background-color: black; */
@@ -146,6 +147,7 @@ mark {
 
 .section {
   text-align: center;
+  justify-items: center;
 }
 
 .modal {
