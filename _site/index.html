@@ -37,11 +37,17 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://inspectlet.com" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://inspectlet.com" crossorigin="anonymous">
 
     <!-- FONT
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet" type="text/css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya:ital,wght@0,800;0,900;1,800;1,900&family=Changa+One:ital@0;1&family=Playfair+Display:ital,wght@0,800;0,900;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -107,85 +113,92 @@
         </a>
     </div>
     <div id="hero" class="section hero">
-        <div id="hero-content" class="container">
+        <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1 id="hero-title"><mark>Hello, we are STRØM. Users love you?</mark></h1>
-                    <h5><mark id="hero-subtitle">Build the right things right. User centric and research
-                            driven.</mark></h2>
-                        <a href="#letstalk" class="button" type="submit">
-                            Learn 🚀 what to build next ...
-                        </a>
-                </div>
+                <h1 id="hero-title">
+                    <mark>Hello, we are STRØM. Users love you?</mark>
+                </h1>
+                <h5>
+                    <mark id="hero-subtitle">Build the right things right. User centric and research driven. <br>Lean UX
+                        and
+                        agile product design as a service.</mark>
+                </h5>
+                <a href="#letstalk" class="button" type="submit">Learn 🚀 what to build next ...</a>
             </div>
         </div>
+        <div class="row" id="bottom-bar">
+            <p class="benefit b-one"><span>Know users</span><span>and market fit</span></p>
+            <p class="benefit b-two"><span>Discover business</span><span>opportunities</span></p>
+            <p class="benefit b-three"><span class="line l-one">Make effective</span><span class="line l-two">product decisions</span></p>
+        </div>
+    </div>
 
-        <!-- End Document
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-        <!-- Modals
+    <!-- Modals
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <div class="modal invisible" id="letstalk">
-            <div class="modal-content container">
-                <h3>Do you want to talk?</h3>
-                <p>Our belief is, in order to build the right things the
-                    right way, we need a thorough understanding of our users. Product design decisions should be
-                    based on research. We enable you to ship added value.</p>
-                <form netlify name="STRØM Website Contact" method="POST">
-                    <div class="row">
-                        <div class="one-half column">
-                            <label for="name" class="u-full-width">
-                                Name
-                            </label>
-                            <input name="name" id="name" class="u-full-width" type="text" placeholder="Who are you?">
-                        </div>
-                        <div class="one-half column">
-                            <label for="contact" class="u-full-width">
-                                Phone / Email
-                            </label>
-                            <input name="contact" id="contact" class="u-full-width" type="text"
-                                placeholder="How can we reach you?">
-                        </div>
-                        <div class="row">
-                            <button class="button" type="submit">
-                                We'll contact you ...
-                            </button>
-                        </div>
+    <div class="modal invisible" id="letstalk">
+        <div class="modal-content container">
+            <h3>Do you want to talk?</h3>
+            <p>Our belief is, in order to build the right things the
+                right way, we need a thorough understanding of our users. Product design decisions should be
+                based on research. We enable you to ship added value.</p>
+            <form netlify name="STRØM Website Contact" method="POST">
+                <div class="row">
+                    <div class="one-half column">
+                        <label for="name" class="u-full-width">
+                            Name
+                        </label>
+                        <input name="name" id="name" class="u-full-width" type="text" placeholder="Who are you?">
                     </div>
-                </form>
-                <!-- <p>You also reach us under ‭<a href="tel:+49-174-3235390">+49
+                    <div class="one-half column">
+                        <label for="contact" class="u-full-width">
+                            Phone / Email
+                        </label>
+                        <input name="contact" id="contact" class="u-full-width" type="text"
+                            placeholder="How can we reach you?">
+                    </div>
+                    <div class="row">
+                        <button class="button" type="submit">
+                            We'll contact you ...
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <!-- <p>You also reach us under ‭<a href="tel:+49-174-3235390">+49
                         174 3235390‬ (Fåbian)</a> and <a href="+49-173-9115205">+49 173 9115205 (Jønas)</a>. <br> With
                     ❤️
                     from Hamburg. </p> -->
-            </div>
-            <a href="#close" class="background"></a>
         </div>
+        <a href="#close" class="background"></a>
+    </div>
 
-        <!-- Hotjar Tracking Code for strom.international
+    <!-- Hotjar Tracking Code for strom.international
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <script>
-            (function (h, o, t, j, a, r) {
-                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-                h._hjSettings = { hjid: 1748768, hjsv: 6 };
-                a = o.getElementsByTagName('head')[0];
-                r = o.createElement('script'); r.async = 1;
-                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-        </script>
-        <!-- Begin Inspectlet Asynchronous Code
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1748768, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <!-- Begin Inspectlet Asynchronous Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <script type="text/javascript">
-            (function () {
-                window.__insp = window.__insp || [];
-                __insp.push(['wid', 31184191]);
-                var ldinsp = function () {
-                    if (typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=31184191&r=' + Math.floor(new Date().getTime() / 3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x);
-                };
-                setTimeout(ldinsp, 0);
-            })();
-        </script>
-        <!-- End Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+        (function () {
+            window.__insp = window.__insp || [];
+            __insp.push(['wid', 31184191]);
+            var ldinsp = function () {
+                if (typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=31184191&r=' + Math.floor(new Date().getTime() / 3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x);
+            };
+            setTimeout(ldinsp, 0);
+        })();
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
 </body>
 
 </html>
