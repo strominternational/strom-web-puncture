@@ -173,6 +173,11 @@ mark {
   transition: 0.125s ease-out;
 } */
 
+.close {
+  margin-bottom: 12vh;
+  display: inline-block;
+}
+
 /* Larger than mobile */
 @media (min-width: 400px) {
   .benefit::before {
@@ -191,6 +196,11 @@ mark {
 
   .benefit:first-of-type {
     margin: 2rem auto 10vh auto;
+  }
+
+  .close {
+    margin-bottom: 0;
+    display: inline-block;
   }
 }
 
