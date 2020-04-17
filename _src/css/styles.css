@@ -2,6 +2,12 @@ body {
   font-weight: 600;
 }
 
+/* .modal:target>body {
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px;
+} */
+
 h1,
 h2,
 h3,
@@ -19,16 +25,17 @@ mark {
 #header {
   display: block;
   text-align: left;
-  /* background: rgb(0, 0, 0);
+  /* height: 44px; */
+  background: rgb(0, 0, 0);
   background: linear-gradient(
-    172deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.32815132889093135) 25%,
-    rgba(0, 0, 0, 0) 100%
-  ); */
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    /* rgba(0, 0, 0, 0.32815132889093135) 25%, */ rgba(0, 0, 0, 0) 90%
+  );
   position: fixed;
-  padding: 16px 16px 16px 22px; 
+  padding: 16px 16px 16px 22px;
   z-index: 90;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -41,12 +48,12 @@ mark {
 #hero-message {
   display: flex;
   margin-top: 28vh;
-  /* z-index: 2; */
+  z-index: 2;
 }
 
 #hero-subtitle {
   min-width: 280px;
-  max-width: 45vw;
+  max-width: 60vw;
 }
 
 #logo {
@@ -62,17 +69,17 @@ mark {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
-  background:  no-repeat center center fixed; 
+  min-height: 100vh;
+  background: no-repeat center center fixed;
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #bottom-bar {
-  /* position: fixed; */
+  position: relative;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +91,7 @@ mark {
   bottom: 0;
   left: 0;
   /* margin: 0; */
-  padding: 0 80px;
+  padding: 0 8vw;
   box-sizing: border-box;
   /* z-index: 0; */
   background: linear-gradient(
@@ -98,13 +105,11 @@ mark {
 .benefit::before {
   content: "„";
   color: rgba(0, 0, 0, 0.66);
-  font-size: 50rem;
-  /* line-height: -25rem; */
-  margin: -14rem 29px 14rem -29px;
+  font-size: 36rem;
+  margin: -10rem 18px 10rem -18px;
   padding: 0;
   text-shadow: none;
   pointer-events: none;
-  /* z-index: -1; */
 }
 
 /* .benefit::after {
@@ -119,32 +124,33 @@ mark {
 } */
 
 .benefit {
-  /* font-family: "Changa One", cursive; */
-  /* font-family: "Alegreya", serif; */
   font-family: "Playfair Display", serif;
-  /* font-family: "Abril Fatface", cursive; */
   font-style: italic;
   /* text-align: center; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
-  font-size: 3rem;
+  font-size: 2.75rem;
   /* width: 33.33vw; */
   /* height: min-content; */
   font-weight: 800;
-  line-height: 3.66rem;
+  line-height: 3.33rem;
   /* height: 4rem; */
   /* word-wrap: break-word; */
   /* background-color: black; */
   /* margin: auto; */
   /* max-width: 30%; */
-  padding: 0 4rem 0 4rem;
-  margin: 5rem auto 15vh auto;
+  padding: 0 2rem 0 2rem;
+  margin: 2rem auto 10vh auto;
   /* text-transform: uppercase; */
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: white;
   text-shadow: 0.075em 0.08em 0.15em rgba(0, 0, 0, 0.66);
+}
+
+.benefit:first-of-type {
+  margin: 8rem auto 12vh auto;
 }
 
 .benefit .line {
@@ -167,6 +173,37 @@ mark {
   transition: 0.125s ease-out;
 } */
 
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .benefit::before {
+    content: "„";
+    font-size: 50rem;
+    margin: -14rem 29px 14rem -29px;
+  }
+  .benefit {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 3.66rem;
+    padding: 0 4rem 0 4rem;
+    margin: 8rem auto 16vh auto;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+}
 
 .section {
   text-align: center;
@@ -178,14 +215,15 @@ mark {
   opacity: 0;
   visibility: hidden;
   /* transition: 0.125s ease-out; */
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   display: -webkit-box;
-  display: flex;
+  /* display: flex; */
   top: 0;
   left: 0;
   z-index: 100;
+  /* max-height: 100vh; */
 }
 
 .modal .background {
@@ -195,13 +233,14 @@ mark {
   width: 100%;
   height: 100%;
   z-index: 0;
+  /* overflow: hidden; */
 }
 
 .modal-content {
   display: flex;
   min-width: 320px;
   max-width: 640px;
-  /* max-width: 60vw; */
+  max-height: 100vh;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -209,6 +248,7 @@ mark {
   margin: auto;
   padding: 6rem;
   background: white;
+  overflow-y: auto;
 }
 
 .modal:target {
@@ -229,8 +269,9 @@ mark {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 5px 20px;
-  transition: 0.125s ease-out;
+  transition: color 0.125s ease-out;
   outline: 0;
   /* box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); */
   max-width: 60vw;
@@ -287,4 +328,16 @@ input[type="text"]::placeholder {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: #ffff00;
+  background-color: black;
+  padding-left: 6px;
+  padding-right: 6px;
 }

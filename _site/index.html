@@ -1,4 +1,11 @@
 
+<!--
+
+Integrate tabbing order
+Aria-roles for accessibility
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,17 +52,17 @@
     <link rel="dns-prefetch" href="https://hn.inspectlet.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.inspectlet.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://cdn.inspectlet.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://source.unsplash.com" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://source.unsplash.com" crossorigin="anonymous">
 
-    <!-- FONT
+    <!-- Web fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet" type="text/css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-
     <link
-        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,800;0,900;1,800;1,900&family=Changa+One:ital@0;1&family=Playfair+Display:ital,wght@0,800;0,900;1,800;1,900&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;0,900;1,800;1,900&display=swap"
+        rel="stylesheet" type="text/css">
 
     <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -64,7 +71,32 @@
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
         #hero {
-            background-image:url('https://source.unsplash.com/collection/620551/1920x1080');
+            background-image: url('https://source.unsplash.com/collection/620551/320x586');
+        }
+
+        @media (min-width: 640px) {
+            #hero {
+                background-image: url('https://source.unsplash.com/collection/620551/640x1136');
+            }
+        }
+
+        @media (min-width: 1200px)
+        /* (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi)  */
+        {
+            #hero {
+                background-image: url('https://source.unsplash.com/collection/620551/1200x800');
+            }
+        }
+        @media (min-width: 1600px) {
+            #hero {
+                background-image: url('https://source.unsplash.com/collection/620551/1600x1200');
+            }
+        }
+        @media (min-width: 1900px) {
+            #hero {
+                background-image: url('https://source.unsplash.com/collection/620551/1920x1080');
+            }
         }
     </style>
 
@@ -93,18 +125,6 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-P7LNQDP');</script>
-    <!-- Hotjar Tracking Code
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <script>
-            (function (h, o, t, j, a, r) {
-                h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-                h._hjSettings = { hjid: 1748768, hjsv: 6 };
-                a = o.getElementsByTagName('head')[0];
-                r = o.createElement('script'); r.async = 1;
-                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                a.appendChild(r);
-            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-        </script> -->
 </head>
 
 <body>
@@ -116,7 +136,7 @@
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div id="header" class="section u-full-width">
-        <a href="." id="logo">
+        <a href="." id="logo" class="truncate">
             STRØM . People Product Process
         </a>
     </div>
@@ -126,11 +146,12 @@
                 <mark>Hello, we are STRØM. Users love you?</mark>
             </h1>
             <h5 id="hero-subtitle">
-                <mark>Build the right things right. User centric and research driven. Lean UX
-                    and
-                    agile product design as a service.</mark>
+                <mark>
+                    Build the right things right. User centric and research driven.
+                    <!-- Lean UX and agile product design as a service. -->
+                </mark>
             </h5>
-            <a href="#letstalk" class="button" type="submit">Learn 🚀 what to build next</a>
+            <a href="#letstalk" class="button" type="submit">Contact us 🚀 now</a>
         </div>
         <div class="row" id="bottom-bar">
             <p class="benefit b-one"><span>Know users</span><span>and market fit</span></p>
@@ -147,10 +168,9 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="modal invisible" id="letstalk">
         <div class="modal-content container">
-            <h3>Do you want to talk?</h3>
-            <p>Our belief is, in order to build the right things the
-                right way, we need a thorough understanding of our users. Product design decisions should be
-                based on research. We enable you to ship added value.</p>
+            <h3>Do yøu want to talk?</h3>
+            <p>To Discover product opportunities, we need a thorough understanding of our users.</p>
+            <p>We offer lean user research and agile product design as a service, to enable you to ship added value.</p>
             <form netlify name="STRØM Website Contact" method="POST">
                 <div class="row">
                     <div class="one-half column">
@@ -198,7 +218,7 @@
 
     <!-- Begin Inspectlet Asynchronous Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         (function () {
             window.__insp = window.__insp || [];
             __insp.push(['wid', 31184191]);
@@ -207,7 +227,7 @@
             };
             setTimeout(ldinsp, 0);
         })();
-    </script>
+    </script> -->
     <!-- End Inspectlet Asynchronous Code -->
 </body>
 
