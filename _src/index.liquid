@@ -83,30 +83,34 @@ Aria-roles for accessibility
             background-image: url('{{heroimage-320}}');
         }
 
-        @media (min-width: 640px) {
+        @media (min-width: 320px),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
             #hero {
                 background-image: url('{{heroimage-640}}');
             }
         }
 
-        @media (min-width: 1200px)
-        /* (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi)  */
-        {
+        @media (min-width: 640px) {
             #hero {
                 background-image: url('{{heroimage-1200}}');
             }
         }
-        @media (min-width: 1600px) {
+
+        @media (min-width: 1200px) {
             #hero {
                 background-image: url('{{heroimage-1600}}');
             }
         }
-        @media (min-width: 1900px) {
+
+        @media (min-width: 1600px) {
             #hero {
                 background-image: url('{{heroimage-1920}}');
             }
         }
+
+        @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px),
+        (min-resolution: 192dpi) and (min-width: 800px) {}
     </style>
 
     <!-- Favicon

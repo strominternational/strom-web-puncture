@@ -74,30 +74,34 @@ Aria-roles for accessibility
             background-image: url('https://source.unsplash.com/collection/620551/320x586');
         }
 
-        @media (min-width: 640px) {
+        @media (min-width: 320px),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
             #hero {
                 background-image: url('https://source.unsplash.com/collection/620551/640x1136');
             }
         }
 
-        @media (min-width: 1200px)
-        /* (-webkit-min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi)  */
-        {
+        @media (min-width: 640px) {
             #hero {
                 background-image: url('https://source.unsplash.com/collection/620551/1200x800');
             }
         }
-        @media (min-width: 1600px) {
+
+        @media (min-width: 1200px) {
             #hero {
                 background-image: url('https://source.unsplash.com/collection/620551/1600x1200');
             }
         }
-        @media (min-width: 1900px) {
+
+        @media (min-width: 1600px) {
             #hero {
                 background-image: url('https://source.unsplash.com/collection/620551/1920x1080');
             }
         }
+
+        @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 800px),
+        (min-resolution: 192dpi) and (min-width: 800px) {}
     </style>
 
     <!-- Favicon
