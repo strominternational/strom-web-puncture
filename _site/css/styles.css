@@ -28,18 +28,32 @@ mark {
   ); */
   position: fixed;
   padding: 16px 16px 16px 22px; 
-  z-index: 100;
+  z-index: 90;
 }
 
 .container {
-  margin-top: 29vh;
-  z-index: 2;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-message {
+  display: flex;
+  margin-top: 28vh;
+  /* z-index: 2; */
+}
+
+#hero-subtitle {
+  min-width: 280px;
+  max-width: 45vw;
 }
 
 #logo {
   display: inline-block;
-  margin: 0;
-  font-size: 2rem;
+  /* margin: 0;
+  padding: 0; */
+  font-size: 1.75rem;
   color: #ffff00;
   text-decoration: none;
 }
@@ -47,27 +61,30 @@ mark {
 #hero {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: space-between;
   height: 100vh;
   background:  no-repeat center center fixed; 
   /* -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover; */
   background-size: cover;
+  overflow: hidden;
 }
 
 #bottom-bar {
-  position: fixed;
+  /* position: fixed; */
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  /* justify-self: flex-end; */
   /* justify-content: space-around; */
   width: 100%;
   bottom: 0;
   left: 0;
   /* margin: 0; */
-  padding: 0 60px 130px 60px;
+  padding: 0 80px;
   box-sizing: border-box;
   /* z-index: 0; */
   background: linear-gradient(
@@ -75,6 +92,7 @@ mark {
     rgba(0, 0, 0, 0.66) 0%,
     rgba(0, 0, 0, 0) 100%
   );
+  overflow: hidden;
 }
 
 .benefit::before {
@@ -86,7 +104,7 @@ mark {
   padding: 0;
   text-shadow: none;
   pointer-events: none;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 /* .benefit::after {
@@ -107,7 +125,7 @@ mark {
   /* font-family: "Abril Fatface", cursive; */
   font-style: italic;
   /* text-align: center; */
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   /* justify-content: center; */
   /* align-items: center; */
@@ -121,8 +139,8 @@ mark {
   /* background-color: black; */
   /* margin: auto; */
   /* max-width: 30%; */
-  padding: 0;
-  margin: 0 auto 0 auto;
+  padding: 0 4rem 0 4rem;
+  margin: 5rem auto 15vh auto;
   /* text-transform: uppercase; */
   letter-spacing: 1px;
   color: white;
@@ -156,23 +174,24 @@ mark {
 }
 
 .modal {
+  display: none;
   opacity: 0;
   visibility: hidden;
-  transition: 0.22s ease-out;
-  position: fixed;
+  /* transition: 0.125s ease-out; */
+  position: absolute;
   height: 100%;
   width: 100%;
   display: -webkit-box;
   display: flex;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 100;
 }
 
 .modal .background {
-  display: block;
+  /* display: block; */
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -180,7 +199,9 @@ mark {
 
 .modal-content {
   display: flex;
-  max-width: 650px;
+  min-width: 320px;
+  max-width: 640px;
+  /* max-width: 60vw; */
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -191,6 +212,7 @@ mark {
 }
 
 .modal:target {
+  display: flex;
   opacity: 1;
   visibility: visible;
 }
@@ -211,6 +233,10 @@ mark {
   transition: 0.125s ease-out;
   outline: 0;
   /* box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); */
+  max-width: 60vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .button:hover {
@@ -251,6 +277,14 @@ input[type="text"]::placeholder {
 }
 
 .invisible {
+  display: none;
   opacity: 0;
   visibility: hidden;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
