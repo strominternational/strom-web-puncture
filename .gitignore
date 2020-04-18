@@ -1,25 +1,17 @@
 # Ignore installed npm modules
 node_modules/
 
-# Ignore build tool output, e.g. code coverage – Taken from 11ty gitignore file!
-# .nyc_output/
-# coverage/
-
-# Ignore API documentation – Taken from 11ty gitignore file!
-# api-docs/
-
 # Ignore folders from source code editors
 .vscode
 .idea
 
-# Ignore eleventy output when doing manuell tests – Taken from 11ty gitignore file!
-# _site/
-
 # package-lock.json
 
-# README.md
+# Created by https://www.gitignore.io/api/macos
+# Edit at https://www.gitignore.io/?templates=macos
 
-# General Apple file ignore
+### macOS ###
+# General
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -38,3 +30,10 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
