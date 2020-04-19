@@ -35,6 +35,8 @@ Aria-roles for accessibility
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="preconnect" href="https://in.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://in.hotjar.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://ws3.hotjar.com" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://ws3.hotjar.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://ws5.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://ws5.hotjar.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://ws11.hotjar.com" crossorigin="anonymous">
@@ -57,12 +59,14 @@ Aria-roles for accessibility
     <link rel="dns-prefetch" href="https://inspectlet.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://ws7.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://ws7.hotjar.com" crossorigin="anonymous">
-    <link rel="preconnect" href="https://hn.inspectlet.com" crossorigin="anonymous">
+    <!-- <link rel="preconnect" href="https://hn.inspectlet.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://hn.inspectlet.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.inspectlet.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://cdn.inspectlet.com" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://cdn.inspectlet.com" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://source.unsplash.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://source.unsplash.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
 
     <!-- Web fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -76,6 +80,7 @@ Aria-roles for accessibility
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/styles.css">
     <style type="text/css">
+        /* Responsive images for hero */
         #hero {
             background-image: url('{{heroimage-320}}');
         }
@@ -110,9 +115,35 @@ Aria-roles for accessibility
         (min-resolution: 192dpi) and (min-width: 800px) {}
     </style>
 
+    <!-- Feather icons as svg use: <i data-feather="circle"></i>
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+
     <!-- Favicon
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Toggle class invisible
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript">
+        window.onload = function () {
+            // console.log(localStorage["status"]);
+            var element = document.getElementById("announcement");
+            if (localStorage["status"] != "agreed") {
+                element.classList.toggle("invisible");
+            }
+        }
+        function toggleInvisible(e) {
+            var target = e.target.parentElement.id;
+            var element = document.getElementById(target);
+            localStorage.setItem("status", "agreed");
+            // console.log(localStorage["status"]);
+            element.classList.toggle("invisible");
+        }
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -121,7 +152,6 @@ Aria-roles for accessibility
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-163175793-1');
     </script>
 
@@ -145,6 +175,19 @@ Aria-roles for accessibility
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="announcement" class="announcement multi-truncate invisible">
+        <div class="column">
+            <input type="checkbox" id="expanded"></input>
+            <p>With the use of this website, you consent to <a class="link" href="#consent">cookie storage and data
+                    analysis
+                    practices</a> we
+                employ on this site. User tracking and session recording allow us to continuously improve your
+                experience. Data is solely used anonymized to gain insights into the workability of this
+                website and our offers.</p>
+            <label for="expanded" role="button">Read all</label>
+        </div>
+        <a onclick="toggleInvisible(event)" class="close-announcement link" id="close-announcement">AGREE</a>
+    </div>
     <div id="header" class="section u-full-width">
         <a href="." id="logo" class="truncate">
             {{ title }}
@@ -153,7 +196,7 @@ Aria-roles for accessibility
     <div class="section" id="hero">
         <div class="container" id="hero-message">
             <h1 id="hero-title">
-                <mark>Hello, we are Strøm. Users love you?</mark>
+                <mark>Hello, we are STRØM. Users love you?</mark>
             </h1>
             <h5 id="hero-subtitle">
                 <mark>
@@ -161,12 +204,13 @@ Aria-roles for accessibility
                     <!-- Lean UX and agile product design as a service. -->
                 </mark>
             </h5>
-            <a href="#letstalk" class="button" type="submit">Contact us 🚀 now</a>
+            <a href="#letstalk" class="button">Contact us 🚀 now</a>
         </div>
         <div class="row" id="bottom-bar">
             <p class="benefit b-one"><span>Understand users</span><span>and market fit</span></p>
             <p class="benefit b-two"><span>Discover business</span><span>opportunities</span></p>
-            <p class="benefit b-three"><span class="line l-one">Build valuable</span><span class="line l-two">products</span></p>
+            <p class="benefit b-three"><span class="line l-one">Build valuable</span><span
+                    class="line l-two">products</span></p>
         </div>
     </div>
 
@@ -179,7 +223,8 @@ Aria-roles for accessibility
         <div class="modal-content container">
             <h3>Do yøu want to talk?</h3>
             <p>To discover and validate business opportunities, we need a thorough understanding of our users.</p>
-            <p>We offer lean user research and agile product experience design as a service, to enable you to ship added value.</p>
+            <p>We offer lean user research and agile product experience design as a service, to enable you to ship added
+                value.</p>
             <form netlify name="STRØM Website Contact" method="POST">
                 <div class="row">
                     <div class="one-half column">
@@ -201,7 +246,7 @@ Aria-roles for accessibility
                             We'll get back to you 🙋🏼‍♀️
                         </button>
                         <br>
-                        <a class="link close" href="#close">Close</a>
+                        <a class="link close-modal" href="#close">Close</a>
                     </div>
                 </div>
             </form>

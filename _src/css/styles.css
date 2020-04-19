@@ -1,12 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-weight: 600;
 }
-
-/* .modal:target>body {
-  height: 100vh;
-  overflow-y: hidden;
-  padding-right: 15px;
-} */
 
 h1,
 h2,
@@ -22,8 +20,30 @@ mark {
   padding-right: 0.5rem;
 }
 
+#announcement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  color: gray;
+  font-weight: 400;
+  font-size: 1.33rem;
+  line-height: 1.75rem;
+  background-color: black;
+  padding: 4vh 15vw 4vh 15vw;
+  width: 100%;
+  z-index: 100;
+  /* overflow: hidden; */
+}
+
+.announcement p {
+  margin: 0;
+}
+
 #header {
-  display: block;
+  display: flex;
   text-align: left;
   /* height: 44px; */
   background: rgb(0, 0, 0);
@@ -32,6 +52,8 @@ mark {
     rgba(0, 0, 0, 0.5) 0%,
     /* rgba(0, 0, 0, 0.32815132889093135) 25%, */ rgba(0, 0, 0, 0) 90%
   );
+  top: 0;
+  left: 0;
   position: fixed;
   padding: 16px 16px 16px 22px;
   z-index: 90;
@@ -58,9 +80,10 @@ mark {
 
 #logo {
   display: inline-block;
-  /* margin: 0;
-  padding: 0; */
-  font-size: 1.75rem;
+  margin: 0;
+  padding: 0;
+  font-size: 1.66rem;
+  /* font-size: 2.3rem; */
   color: #ffff00;
   text-decoration: none;
 }
@@ -155,7 +178,6 @@ mark {
 
 .benefit .line {
   display: inline-block;
-  /* margin-bottom: 0.75rem; */
 }
 
 .benefit:hover {
@@ -173,51 +195,9 @@ mark {
   transition: 0.125s ease-out;
 } */
 
-.close {
+.close-modal {
   margin-bottom: 12vh;
   display: inline-block;
-}
-
-/* Larger than mobile */
-@media (min-width: 400px) {
-  .benefit::before {
-    content: "„";
-    font-size: 50rem;
-    margin: -14rem 29px 14rem -29px;
-  }
-
-  .benefit {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 3.66rem;
-    padding: 0 0 0 3rem;
-    margin: 8rem auto 16vh auto;
-  }
-
-  .benefit:first-of-type {
-    margin: 2rem auto 10vh auto;
-  }
-
-  .close {
-    margin-bottom: 0;
-    display: inline-block;
-  }
-}
-
-/* Larger than phablet */
-@media (min-width: 550px) {
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
 }
 
 .section {
@@ -286,7 +266,7 @@ mark {
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 5px 20px;
-  transition: color 0.125s ease-out;
+  transition: 0.125s ease-out;
   outline: 0;
   /* box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25); */
   max-width: 60vw;
@@ -336,6 +316,7 @@ input[type="text"]::placeholder {
   display: none;
   opacity: 0;
   visibility: hidden;
+  transition: 0.22s ease-out;
 }
 
 .truncate {
@@ -346,13 +327,148 @@ input[type="text"]::placeholder {
 }
 
 .link {
+  /* display: inline; */
+  /* position: relative; */
+  /* width: min-content; */
   text-decoration: none;
+  /* font-weight: 400; */
   color: black;
+}
+
+.close-modal {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .link:hover {
   color: #ffff00;
   background-color: black;
-  padding-left: 6px;
-  padding-right: 6px;
+}
+
+.announcement p .link {
+  font-weight: 400;
+}
+
+.announcement .link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  height: min-content;
+}
+
+.announcement .link:hover {
+  color: #ffff00;
+  background-color: black;
+  padding: 0;
+}
+
+.announcement .link.close-announcement {
+  text-decoration: none;
+  color: #ffff00;
+  margin-top: 2.6vh;
+  cursor: pointer;
+}
+
+.announcement .link:hover.close-announcement {
+  color: white;
+  background-color: black;
+  padding: 0;
+}
+
+.multi-truncate input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.multi-truncate p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.multi-truncate label {
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  display: inline;
+  cursor: pointer;
+}
+
+.multi-truncate label:hover {
+  color: #ffff00;
+}
+
+.multi-truncate input:focus ~ label {
+  outline: -webkit-focus-ring-color auto 5px;
+  z-index: 200;
+}
+
+.multi-truncate #expanded:checked + p {
+  -webkit-line-clamp: unset;
+}
+
+.multi-truncate input:checked ~ label {
+  display: none;
+}
+
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  #announcement {
+    flex-direction: row;
+    /* align-content: center; */
+  }
+
+  .announcement p {
+    margin-right: 8vw;
+  }
+
+  .announcement .link.close-announcement {
+    margin: auto;
+  }
+  
+  .benefit::before {
+    content: "„";
+    font-size: 50rem;
+    margin: -14rem 29px 14rem -29px;
+  }
+
+  .benefit {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 3.66rem;
+    padding: 0 0 0 3rem;
+    margin: 8rem auto 16vh auto;
+  }
+
+  .benefit:first-of-type {
+    margin: 2rem auto 10vh auto;
+  }
+
+  .close-modal {
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  #logo {
+    font-size: 2.3rem;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
 }
