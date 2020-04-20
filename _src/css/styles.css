@@ -196,8 +196,8 @@ mark {
 } */
 
 .close-modal {
-  margin-bottom: 12vh;
-  display: inline-block;
+  margin-bottom: 11vh;
+  display: block;
 }
 
 .section {
@@ -213,7 +213,7 @@ mark {
   position: fixed;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
+  /* display: -webkit-box; */
   /* display: flex; */
   top: 0;
   left: 0;
@@ -327,12 +327,13 @@ input[type="text"]::placeholder {
 }
 
 .link {
-  /* display: inline; */
-  /* position: relative; */
-  /* width: min-content; */
+  display: inline;
   text-decoration: none;
-  /* font-weight: 400; */
   color: black;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .close-modal {
