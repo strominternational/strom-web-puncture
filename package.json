@@ -4,7 +4,8 @@
   "description": "Technical puncture for a website for our company, based on JAMstack and SSG 11ty that sits on github and automatically builds via Netlify.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve"
   },
   "repository": {
     "type": "git",
