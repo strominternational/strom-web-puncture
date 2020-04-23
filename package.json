@@ -22,6 +22,7 @@
     "@11ty/eleventy": "^0.10.0"
   },
   "dependencies": {
-    "file-size": "^1.0.0"
+    "file-size": "^1.0.0",
+    "jstransformer-sass": "^1.0.0"
   }
 }
