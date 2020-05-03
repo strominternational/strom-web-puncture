@@ -1,3 +1,13 @@
 [build]
     command = "eleventy"
     publish = "_site"
+
+# [[plugins]]
+# package = "netlify-plugin-checklinks"
+# package = "netlify-plugin-subfont"
+# package = "netlify-plugin-cypress"
+[[headers]]
+# Define which paths this specific [[headers]] block will cover.
+    for = "/*"
+        [headers.values]
+        Access-Control-Allow-Origin = "*" # Also set in Netlify-_headers-file in site root.

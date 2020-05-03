@@ -1,3 +1,12 @@
+---
+title: "STRØM . People Product Process"
+heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
+heroimage-320: "https://source.unsplash.com/collection/620551/320x586"
+heroimage-640: "https://source.unsplash.com/collection/620551/640x1136"
+heroimage-1200: "https://source.unsplash.com/collection/620551/1200x800"
+heroimage-1600: "https://source.unsplash.com/collection/620551/1600x1200"
+heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
+---
 
 <!--
 
@@ -14,7 +23,7 @@ Aria-roles for accessibility
     <!-- Basic Page Needs
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>STRØM . People Product Process . User experience research and digital product design agency ...</title>
+    <title>{{ title }} . User experience research and digital product design agency ...</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -74,32 +83,32 @@ Aria-roles for accessibility
     <style>
         /* Responsive images for hero */
         #hero {
-            background-image: url('https://source.unsplash.com/collection/620551/320x586');
+            background-image: url('{{heroimage-320}}');
         }
 
         @media (min-width: 320px),
         (-webkit-min-device-pixel-ratio: 2),
         (min-resolution: 192dpi) {
             #hero {
-                background-image: url('https://source.unsplash.com/collection/620551/640x1136');
+                background-image: url('{{heroimage-640}}');
             }
         }
 
         @media (min-width: 640px) {
             #hero {
-                background-image: url('https://source.unsplash.com/collection/620551/1200x800');
+                background-image: url('{{heroimage-1200}}');
             }
         }
 
         @media (min-width: 1200px) {
             #hero {
-                background-image: url('https://source.unsplash.com/collection/620551/1600x1200');
+                background-image: url('{{heroimage-1600}}');
             }
         }
 
         @media (min-width: 1600px) {
             #hero {
-                background-image: url('https://source.unsplash.com/collection/620551/1920x1080');
+                background-image: url('{{heroimage-1920}}');
             }
         }
 
@@ -203,7 +212,7 @@ Aria-roles for accessibility
     </div>
     <div id="header" class="section u-full-width">
         <a href="." id="logo" class="truncate">
-            STRØM . People Product Process
+            {{ title }}
         </a>
     </div>
     <div class="section" id="hero">

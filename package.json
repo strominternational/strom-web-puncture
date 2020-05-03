@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/strominternational/strom-website#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "tailwindcss": "^1.2.0"
   },
   "dependencies": {
-    "file-size": "^1.0.0"
+    "file-size": "^1.0.0",
+    "jshint": "^2.11.0"
   }
 }
