@@ -465,17 +465,17 @@ input[type="text"]::placeholder {
 }
 
 /* Larger than mobile */
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .benefit-box {
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
   }
 
   .benefit-box .benefit-content {
     text-align: left;
-    padding: 0 80px;
     visibility: hidden;
     opacity: 0;
     height: 0;
+    padding: 0 3vw;
     margin: 3vh auto 0 auto;
   }
 
