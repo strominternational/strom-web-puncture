@@ -44,25 +44,6 @@ mark {
   /* overflow: hidden; */
 }
 
-.container {
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-#hero-message {
-  display: flex;
-  margin-top: 26vh;
-  z-index: 2;
-}
-
-#hero-subtitle {
-  min-width: 280px;
-  /* max-width: 60vw; */
-  width: 100%;
-}
-
 #logo {
   display: inline-block;
   height: min-content;
@@ -83,8 +64,27 @@ mark {
   background-size: cover;
 }
 
+#hero-message {
+  display: flex;
+  margin-top: 26vh;
+  z-index: 2;
+}
+
+#hero-subtitle {
+  min-width: 280px;
+  /* max-width: 60vw; */
+  width: 100%;
+}
+
+.container {
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 #bottom-bar {
-  position: fixed;
+  position: relative;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -96,7 +96,7 @@ mark {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 8vw 0 8vw;
+  padding: 0 8vw 6vh 8vw;
   box-sizing: border-box;
   background: linear-gradient(
     0deg,
@@ -111,9 +111,11 @@ mark {
   flex-direction: column;
   align-items: center;
   min-width: 300px;
-  padding-bottom: 15vh;
-  /* height: auto; */
-  /* transition: 1s ease-out; */
+  padding-bottom: 10vh;
+}
+
+.benefit-box:first-of-type {
+  padding-top: 10vh;
 }
 
 .benefit::before {
@@ -171,7 +173,6 @@ mark {
 
 .benefit-content {
   /* display: none; */
-  text-align: left;
   /* max-width: 220px; */
   flex-direction: column;
   visibility: hidden;
@@ -182,7 +183,8 @@ mark {
   height: 0px;
   overflow: hidden;
   transition: 0.125s ease-in;
-  padding: 0 80px;
+  text-align: center;
+  padding: 0 35px;
 }
 
 .benefit-content p {
@@ -193,29 +195,22 @@ mark {
   margin: 0;
 }
 
-.benefit-box:hover .benefit-content {
-  /* display: inline; */
+.benefit-box .benefit-content {
   visibility: visible;
   opacity: 1;
-  transition: 0.125s ease-out;
   margin: 3vh auto 0 auto;
 }
 
-.benefit-box:hover .benefit-content.bene-cont-01 {
-  height: 130px;
+.benefit-content.bene-cont-01 {
+  height: 125px;
 }
 
-.benefit-box:hover .benefit-content.bene-cont-02 {
-  height: 160px;
+.benefit-content.bene-cont-02 {
+  height: 175px;
 }
 
-.benefit-box:hover .benefit-content.bene-cont-03 {
-  height: 100px;
-}
-
-.benefit-box:hover .benefit::before {
-  color: black;
-  transition: 0.125s ease-out;
+.benefit-content.bene-cont-03 {
+  height: 140px;
 }
 
 .section {
@@ -304,7 +299,7 @@ mark {
   border: 1px solid #ffff00;
   color: black;
   margin-top: 40px;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
 }
 
 #hero .button:hover {
@@ -377,7 +372,7 @@ input[type="text"]::placeholder {
 
 .close-modal {
   display: inline-block;
-  margin-bottom: 11vh;
+  margin-bottom: 2vh;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
@@ -470,7 +465,47 @@ input[type="text"]::placeholder {
 }
 
 /* Larger than mobile */
-@media (min-width: 400px) {
+@media (min-width: 1025px) {
+  .benefit-box {
+    padding-bottom: 15vh;
+  }
+
+  .benefit-box .benefit-content {
+    text-align: left;
+    padding: 0 80px;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    margin: 3vh auto 0 auto;
+  }
+
+  .benefit-box:hover .benefit-content {
+    /* display: inline; */
+    visibility: visible;
+    opacity: 1;
+    transition: 0.125s ease-out;
+  }
+
+  .benefit-box:hover .benefit::before {
+    color: black;
+    transition: 0.125s ease-out;
+  }
+  .benefit-box:hover .benefit-content.bene-cont-01 {
+    height: 130px;
+  }
+  
+  .benefit-box:hover .benefit-content.bene-cont-02 {
+    height: 160px;
+  }
+  
+  .benefit-box:hover .benefit-content.bene-cont-03 {
+    height: 100px;
+  }
+  #bottom-bar {
+    position: fixed;
+    padding-bottom: 0;
+  }
+
   .announcement {
     flex-direction: row;
     justify-content: flex-start;

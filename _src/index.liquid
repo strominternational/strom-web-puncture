@@ -215,7 +215,7 @@ Aria-roles for accessibility
         <a onclick="toggleInvisible(event)" class="close-announcement link nowrap" id="close-announcement">I agree</a>
     </div>
     <div id="header" class="section u-full-width">
-        <a href="." id="logo" class="truncate">
+        <a onclick="mixpanel.track('Clicked logo.')" href="." id="logo" class="truncate">
             {{ title }}
         </a>
     </div>
@@ -236,7 +236,7 @@ Aria-roles for accessibility
                 🚀</a>
         </div>
         <div class="row" id="bottom-bar">
-            <div class="benefit-box one-third column">
+            <div onmouseover="mixpanel.track('Hover over benefit 01.')" class="benefit-box one-third column">
                 <div class="benefit">
                     <span>Validate your</span>
                     <span>market fit</span>
@@ -247,7 +247,7 @@ Aria-roles for accessibility
                     </p>
                 </div>
             </div>
-            <div class="benefit-box one-third column">
+            <div onmouseover="mixpanel.track('Hover over benefit 02.')" class="benefit-box one-third column">
                 <div class="benefit">
                     <span>Discover business</span>
                     <span>opportunities</span>
@@ -258,7 +258,7 @@ Aria-roles for accessibility
                     <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to pay for it?</mark></p>
                 </div>
             </div>
-            <div class="benefit-box one-third column">
+            <div onmouseover="mixpanel.track('Hover over benefit 03.')" class="benefit-box one-third column">
                 <div class="benefit">
                     <span class="line l-one">Build valuable</span>
                     <span class="line l-two">products</span>
