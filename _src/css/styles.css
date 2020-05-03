@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body {
@@ -44,14 +44,20 @@ mark {
 
 #header {
   display: flex;
+  min-height: 20vh;
   text-align: left;
   /* height: 44px; */
-  background: rgb(0, 0, 0);
+  /* background: rgb(0, 0, 0); */
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
-    /* rgba(0, 0, 0, 0.32815132889093135) 25%, */ rgba(0, 0, 0, 0) 90%
+    /* rgba(0, 0, 0, 0.32815132889093135) 25%,*/ rgba(0, 0, 0, 0) 90%
   );
+  /* background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0) 100%
+  ); */
   top: 0;
   left: 0;
   position: fixed;
@@ -69,17 +75,19 @@ mark {
 
 #hero-message {
   display: flex;
-  margin-top: 28vh;
+  margin-top: 26vh;
   z-index: 2;
 }
 
 #hero-subtitle {
   min-width: 280px;
-  max-width: 60vw;
+  /* max-width: 60vw; */
+  width: 100%;
 }
 
 #logo {
   display: inline-block;
+  height: min-content;
   margin: 0;
   padding: 0;
   font-size: 1.66rem;
@@ -94,35 +102,40 @@ mark {
   justify-content: space-between;
   min-height: 100vh;
   background: no-repeat center center fixed;
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
   background-size: cover;
-  /* overflow: hidden; */
 }
 
 #bottom-bar {
-  position: relative;
+  position: fixed;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
-  /* justify-self: flex-end; */
-  /* justify-content: space-around; */
+  align-items: flex-end;
+  justify-content: center;
   width: 100%;
+  height: auto;
   bottom: 0;
   left: 0;
-  /* margin: 0; */
-  padding: 0 8vw;
+  right: 0;
+  padding: 0 8vw 0 8vw;
   box-sizing: border-box;
-  /* z-index: 0; */
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.66) 0%,
     rgba(0, 0, 0, 0) 100%
   );
   overflow: hidden;
+}
+
+.benefit-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  padding-bottom: 15vh;
+  /* height: auto; */
+  /* transition: 1s ease-out; */
 }
 
 .benefit::before {
@@ -133,6 +146,7 @@ mark {
   padding: 0;
   text-shadow: none;
   pointer-events: none;
+  transition: 0.125s ease-out;
 }
 
 /* .benefit::after {
@@ -148,12 +162,13 @@ mark {
 
 .benefit {
   font-family: "Playfair Display", serif;
+  /* font-family: 'Abril Fatface', cursive; */
   font-style: italic;
   /* text-align: center; */
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  /* align-items: center; */
+  align-items: start;
   font-size: 2.75rem;
   /* width: 33.33vw; */
   /* height: min-content; */
@@ -164,23 +179,23 @@ mark {
   /* background-color: black; */
   /* margin: auto; */
   /* max-width: 30%; */
-  padding: 0 2rem 0 2rem;
-  margin: 2rem auto 10vh auto;
+  /* padding: 0 2rem 0 2rem; */
+  margin: 0 auto;
   /* text-transform: uppercase; */
-  letter-spacing: 0.5px;
+  /* letter-spacing: .25px; */
   color: white;
-  text-shadow: 0.075em 0.08em 0.15em rgba(0, 0, 0, 0.66);
+  text-shadow: 0 0 0.22em rgba(0, 0, 0, 0.66);
 }
 
-.benefit:first-of-type {
+/* .benefit:first-of-type {
   margin: 8rem auto 12vh auto;
-}
+} */
 
 .benefit .line {
   display: inline-block;
 }
 
-.benefit:hover {
+/* .benefit:hover {
   color: #ffff00;
   transition: 0.125s ease-out;
 }
@@ -188,16 +203,47 @@ mark {
 .benefit:hover::before {
   color: black;
   transition: 0.125s ease-out;
-}
+} */
 
 /* .benefit:hover::after {
   background: rgb(0, 0, 0, 0.5);
   transition: 0.125s ease-out;
 } */
 
-.close-modal {
-  margin-bottom: 11vh;
-  display: block;
+.benefit-content {
+  /* display: none; */
+  text-align: left;
+  /* max-width: 220px; */
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  /* transition: 1s ease-out; */
+  /* background: #ffff00;
+  border-radius: 50%; */
+  height: 0px;
+  overflow: hidden;
+  transition: 0.125s ease-in;
+  padding: 0 80px;
+}
+
+.benefit-box:hover .benefit-content {
+  /* display: inline; */
+  visibility: visible;
+  opacity: 1;
+  transition: 0.125s ease-out;
+  height: 100px;
+  margin: 3vh auto 0 auto;
+}
+
+.benefit-box * {
+  /* pointer-events: none !important; */
+}
+.benefit-box:hover .benefit {
+  /* color: #ffff0f; */
+}
+.benefit-box:hover .benefit::before {
+  color: black;
+  transition: 0.125s ease-out;
 }
 
 .section {
@@ -209,7 +255,6 @@ mark {
   display: none;
   opacity: 0;
   visibility: hidden;
-  /* transition: 0.125s ease-out; */
   position: fixed;
   height: 100%;
   width: 100%;
@@ -222,7 +267,7 @@ mark {
 }
 
 .modal .background {
-  /* display: block; */
+  display: block;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   width: 100%;
@@ -281,6 +326,21 @@ mark {
   color: black;
 }
 
+#hero .button:focus,
+#hero .button {
+  background: #ffff00;
+  border: 1px solid #ffff00;
+  color: black;
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+#hero .button:hover {
+  background: black;
+  border: 1px solid black;
+  color: white;
+}
+
 form label {
   text-align: left;
   color: lightgray;
@@ -316,7 +376,7 @@ input[type="text"]::placeholder {
   display: none;
   opacity: 0;
   visibility: hidden;
-  transition: 0.22s ease-out;
+  /* transition: all 1.22s ease-out; */
 }
 
 .truncate {
@@ -326,24 +386,29 @@ input[type="text"]::placeholder {
   text-overflow: ellipsis;
 }
 
-.link {
-  display: inline;
-  text-decoration: none;
-  color: black;
-}
-
 .nowrap {
   white-space: nowrap;
 }
 
-.close-modal {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.link {
+  display: inline;
+  text-decoration: none;
+  color: black;
+  transition: 0.125s ease-out;
 }
 
 .link:hover {
   color: #ffff00;
   background-color: black;
+}
+
+.close-modal {
+  display: inline-block;
+  margin-bottom: 11vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .announcement p .link {
@@ -414,7 +479,6 @@ input[type="text"]::placeholder {
   display: none;
 }
 
-
 /* Larger than mobile */
 @media (min-width: 400px) {
   #announcement {
@@ -429,28 +493,27 @@ input[type="text"]::placeholder {
   .announcement .link.close-announcement {
     margin: auto;
   }
-  
+
   .benefit::before {
     content: "„";
     font-size: 50rem;
-    margin: -14rem 29px 14rem -29px;
+    margin: -14rem 33px 14rem -33px;
   }
 
   .benefit {
-    font-size: 3rem;
-    font-weight: 800;
-    line-height: 3.66rem;
-    padding: 0 0 0 3rem;
-    margin: 8rem auto 16vh auto;
+    font-size: 3.33rem;
+    font-weight: 900;
+    line-height: 3.99rem;
+    /* padding: 0 0 0 3rem; */
+    /* margin: 0rem auto 4vh auto; */
   }
 
-  .benefit:first-of-type {
+  /* .benefit:first-of-type {
     margin: 2rem auto 10vh auto;
-  }
+  } */
 
   .close-modal {
     margin-bottom: 0;
-    display: inline-block;
   }
 
   #logo {
