@@ -4,7 +4,8 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 ## Important
 - This repo is connected to netlify and automatically deploys on https://strom.international on merge of a pull request.
 - Once you push a branch, you can create an according pull request on github from the branch commit.
-- Pull requests have an automatic netlify deploy preview under a hashed URL per commit that you can look at from the pull request. Once you created the pull request, even if kept open, each push will get it's own deploy preview on push.
+- Pull requests have an automatic netlify deploy preview under a hashed URL per commit that you can look at from the pull request.
+  - Once you created the pull request, even if kept open, each push will get it's own deploy preview on push.
 
 ## Working with this repo
 * Checkout
@@ -13,8 +14,10 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 * Getting started with eleventy https://www.11ty.dev/docs/getting-started/
 
 ### Basics
-Source directory: _src
-Distribution directory: _site
+- Source directory: _src
+- Distribution directory: _site
+- Template language .liquid
+- Pure CSS (no preprocessor)
 
 ### Implemented stuff
 - Normalize CSS https://necolas.github.io/normalize.css/
@@ -34,8 +37,7 @@ Distribution directory: _site
 - No CSS grid used yet (!) only flexbox
 - Skeleton CSS framework
 - Announcement bottom bar, used for data privacy and cookie agreement. 
--- Local storage implemented to only show it until it was agreed once and never again, unless local storage is cleared (type "localStorage.clear();" into console of dev tools to reset).
--- With pure CSS multiline truncation inside and "Read more" link.
--- With "I agree"-button and link to not yet existing (!) data privacy disclaimer page.
+  - Local storage implemented to only show it until it was agreed once and never again, unless local storage is cleared (type "localStorage.clear();" into console of dev tools to reset).
+  - With pure CSS multiline truncation inside and "Read more" link.
+  - With "I agree"-button and link to not yet existing (!) data privacy disclaimer page.
 - Feather icons embedded via https://cdn.jsdelivr.net (no icons in use yet, replace JS function renders icons in frontend)
-
