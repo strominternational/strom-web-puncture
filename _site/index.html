@@ -288,11 +288,11 @@ Aria-roles for accessibility
                             placeholder="How can we reach you?" maxlength="140" required>
                     </div>
                     <div class="row">
-                        <button class="button" type="submit">
+                        <button onclick="mixpanel.track('Clicked contact send.')" class="button" type="submit">
                             We'll get back to you 🙋🏼‍♀️
                         </button>
                         <br>
-                        <a class="close-modal link" href="#close">Close</a>
+                        <a onclick="mixpanel.track('Clicked contact close.')" class="close-modal link" href="#close">Close</a>
                     </div>
                 </div>
             </form>
@@ -301,7 +301,7 @@ Aria-roles for accessibility
                     ❤️
                     from Hamburg. </p> -->
         </div>
-        <a href="#close" class="background"></a>
+        <a onclick="mixpanel.track('Clicked outside modal to close.')"  href="#close" class="background"></a>
     </div>
 
     <!-- Hotjar Tracking Code for strom.international
