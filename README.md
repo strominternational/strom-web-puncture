@@ -6,6 +6,7 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 - Once you push a branch, you can create an according pull request on github from the branch commit.
 - Pull requests have an automatic netlify deploy preview under a hashed URL per commit that you can look at from the pull request.
   - Once you created the pull request, even if kept open, each push will get it's own deploy preview on push.
+- Lighthouse audit on pull request (https://github.com/jakejarvis/lighthouse-action)
 
 ## Working with this repo
 * Checkout
