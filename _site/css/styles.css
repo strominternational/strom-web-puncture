@@ -20,28 +20,6 @@ mark {
   padding-right: 0.5rem;
 }
 
-#announcement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  color: gray;
-  font-weight: 400;
-  font-size: 1.33rem;
-  line-height: 1.75rem;
-  background-color: black;
-  padding: 4vh 15vw 4vh 15vw;
-  width: 100%;
-  z-index: 100;
-  /* overflow: hidden; */
-}
-
-.announcement p {
-  margin: 0;
-}
-
 #header {
   display: flex;
   min-height: 20vh;
@@ -187,28 +165,9 @@ mark {
   text-shadow: 0 0 0.22em rgba(0, 0, 0, 0.66);
 }
 
-/* .benefit:first-of-type {
-  margin: 8rem auto 12vh auto;
-} */
-
 .benefit .line {
   display: inline-block;
 }
-
-/* .benefit:hover {
-  color: #ffff00;
-  transition: 0.125s ease-out;
-}
-
-.benefit:hover::before {
-  color: black;
-  transition: 0.125s ease-out;
-} */
-
-/* .benefit:hover::after {
-  background: rgb(0, 0, 0, 0.5);
-  transition: 0.125s ease-out;
-} */
 
 .benefit-content {
   /* display: none; */
@@ -226,21 +185,34 @@ mark {
   padding: 0 80px;
 }
 
+.benefit-content p {
+  margin: 0 0 10px 0;
+}
+
+.benefit-content p:last-of-type {
+  margin: 0;
+}
+
 .benefit-box:hover .benefit-content {
   /* display: inline; */
   visibility: visible;
   opacity: 1;
   transition: 0.125s ease-out;
-  height: 100px;
   margin: 3vh auto 0 auto;
 }
 
-.benefit-box * {
-  /* pointer-events: none !important; */
+.benefit-box:hover .benefit-content.bene-cont-01 {
+  height: 130px;
 }
-.benefit-box:hover .benefit {
-  /* color: #ffff0f; */
+
+.benefit-box:hover .benefit-content.bene-cont-02 {
+  height: 160px;
 }
+
+.benefit-box:hover .benefit-content.bene-cont-03 {
+  height: 100px;
+}
+
 .benefit-box:hover .benefit::before {
   color: black;
   transition: 0.125s ease-out;
@@ -376,7 +348,8 @@ input[type="text"]::placeholder {
   display: none;
   opacity: 0;
   visibility: hidden;
-  /* transition: all 1.22s ease-out; */
+  /* height: 0; */
+  transition: 0.22s ease-out;
 }
 
 .truncate {
@@ -411,34 +384,51 @@ input[type="text"]::placeholder {
   padding-right: 0.5rem;
 }
 
-.announcement p .link {
+.announcement {
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  color: gray;
   font-weight: 400;
+  font-size: 1.33rem;
+  line-height: 1.75rem;
+  background-color: black;
+  padding: 30px 15vw 30px 15vw;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* transition: 0.22s ease-out; */
 }
 
-.announcement .link {
+.announcement p {
+  margin: 0;
+}
+
+.announcement p .link {
   text-decoration: none;
   color: white;
-  font-weight: 600;
   height: min-content;
 }
 
-.announcement .link:hover {
+.announcement p .link:hover {
   color: #ffff00;
   background-color: black;
   padding: 0;
 }
 
-.announcement .link.close-announcement {
-  text-decoration: none;
+.announcement .close-announcement.link {
   color: #ffff00;
-  margin-top: 2.6vh;
   cursor: pointer;
+  font-weight: 600;
+  margin-top: 25px;
 }
 
-.announcement .link:hover.close-announcement {
+.announcement .close-announcement.link:hover {
   color: white;
-  background-color: black;
-  padding: 0;
 }
 
 .multi-truncate input {
@@ -481,17 +471,18 @@ input[type="text"]::placeholder {
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-  #announcement {
+  .announcement {
     flex-direction: row;
-    /* align-content: center; */
+    justify-content: flex-start;
+    padding: 30px 15vw 60px 15vw;
   }
 
   .announcement p {
     margin-right: 8vw;
   }
 
-  .announcement .link.close-announcement {
-    margin: auto;
+  .announcement .close-announcement.link {
+    margin-top: 0;
   }
 
   .benefit::before {
@@ -504,13 +495,7 @@ input[type="text"]::placeholder {
     font-size: 3.33rem;
     font-weight: 900;
     line-height: 3.99rem;
-    /* padding: 0 0 0 3rem; */
-    /* margin: 0rem auto 4vh auto; */
   }
-
-  /* .benefit:first-of-type {
-    margin: 2rem auto 10vh auto;
-  } */
 
   .close-modal {
     margin-bottom: 0;

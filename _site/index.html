@@ -50,10 +50,10 @@ Aria-roles for accessibility
     <link rel="dns-prefetch" href="https://inspectlet.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://ws7.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://ws7.hotjar.com" crossorigin="anonymous">
-    <!-- <link rel="preconnect" href="https://hn.inspectlet.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://hn.inspectlet.com" crossorigin="anonymous">
-    <link rel="preconnect" href="https://cdn.inspectlet.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://cdn.inspectlet.com" crossorigin="anonymous"> -->
+    <!-- <link rel="preconnect" href="https://hn.inspectlet.com" crossorigin="anonymous"> -->
+    <!-- <link rel="dns-prefetch" href="https://hn.inspectlet.com" crossorigin="anonymous"> -->
+    <!-- <link rel="preconnect" href="https://cdn.inspectlet.com" crossorigin="anonymous"> -->
+    <!-- <link rel="dns-prefetch" href="https://cdn.inspectlet.com" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://source.unsplash.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://source.unsplash.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -109,7 +109,9 @@ Aria-roles for accessibility
 
     <!-- Feather icons as svg use: <i data-feather="circle"></i>
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+
     <script>
         feather.replace()
     </script>
@@ -118,11 +120,14 @@ Aria-roles for accessibility
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Toggle class invisible
+    <!-- UIlang
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="js/uilang.js"></script>
+
+    <!-- Toggle announcement bar visibility via local storage
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script>
         window.onload = function () {
-            // console.log(localStorage["status"]);
             var element = document.getElementById("announcement");
             if (localStorage["status"] != "agreed") {
                 element.classList.toggle("invisible");
@@ -132,7 +137,6 @@ Aria-roles for accessibility
             var target = e.target.parentElement.id;
             var element = document.getElementById(target);
             localStorage.setItem("status", "agreed");
-            // console.log(localStorage["status"]);
             element.classList.toggle("invisible");
         }
     </script>
@@ -190,7 +194,7 @@ Aria-roles for accessibility
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div id="announcement" class="announcement multi-truncate invisible">
         <div class="column">
-            <input type="checkbox" id="expanded">
+            <input type="checkbox" id="expanded" class="invisible">
             <p>With the use of this website, you consent to <a class="link" href="#consent">cookie storage and data
                     analysis
                     practices</a> we
@@ -213,12 +217,14 @@ Aria-roles for accessibility
             </h1>
             <h5 id="hero-subtitle">
                 <mark>
-                    Understand users to discover business opportunities and add value. Lean, user centric and research
+                    Understand customers to discover business opportunities and add value. Lean, user centric and
+                    research
                     driven.
                     <!-- Lean UX and agile product design as a service. -->
                 </mark>
             </h5>
-            <a onclick="mixpanel.track('Clicked contact modal button.');" href="#letstalk" class="button">I'm interested 🚀</a>
+            <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
+                🚀</a>
         </div>
         <div class="row" id="bottom-bar">
             <div class="benefit-box one-third column">
@@ -226,10 +232,10 @@ Aria-roles for accessibility
                     <span>Validate your</span>
                     <span>market fit</span>
                 </div>
-                <div class="benefit-content">
-                    <mark>Some text describing what we want to say here about understanding users and finding the market
-                        fit
-                        for a product.</mark>
+                <div class="benefit-content bene-cont-01">
+                    <p><mark>Targeted user research shows customer pains and needs.</mark></p>
+                    <p><mark>Field research, surveys, user safaris and customer interviews yield valuable.</mark>
+                    </p>
                 </div>
             </div>
             <div class="benefit-box one-third column">
@@ -237,10 +243,10 @@ Aria-roles for accessibility
                     <span>Discover business</span>
                     <span>opportunities</span>
                 </div>
-                <div class="benefit-content">
-                    <mark>Some text describing what we want to say here about understanding users and finding the market
-                        fit
-                        for a product.</mark>
+                <div class="benefit-content bene-cont-02">
+                    <p><mark>Analysis and interpretation of the collected data give valuable insights into user
+                            behaviour. </mark></p>
+                    <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to pay for it?</mark></p>
                 </div>
             </div>
             <div class="benefit-box one-third column">
@@ -248,10 +254,8 @@ Aria-roles for accessibility
                     <span class="line l-one">Build valuable</span>
                     <span class="line l-two">products</span>
                 </div>
-                <div class="benefit-content">
-                    <mark>Some text describing what we want to say here about understanding users and finding the market
-                        fit
-                        for a product.</mark>
+                <div class="benefit-content bene-cont-03">
+                    <mark>Based on the insights, you build and validate business cases for services and applications that add value to users lives, with every increment. </mark>
                 </div>
             </div>
         </div>

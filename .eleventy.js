@@ -11,6 +11,7 @@ module.exports = (function (eleventyConfig) {
 
     eleventyConfig.setTemplateFormats([
         "md",
+        // "js",
         "njk",
         "liquid",
         "html",
@@ -22,6 +23,7 @@ module.exports = (function (eleventyConfig) {
 
     // Static assets to pass through
     eleventyConfig.addPassthroughCopy("./_src/assets");
+    eleventyConfig.addPassthroughCopy("./_src/js");
     return {
         dir: {
             input: '_src',
