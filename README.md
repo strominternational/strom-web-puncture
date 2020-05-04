@@ -35,10 +35,24 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 - Preconnect / Prefetch DNS
 - Unsplash mobile first responsive images
 - Responsiveness / Media queries
-- No CSS grid used yet (!) only flexbox
+- No CSS grid used yet, only flexbox
 - Skeleton CSS framework
-- Announcement bottom bar, used for data privacy and cookie agreement. 
+- Announcement bottom bar, used for data privacy and cookie agreement (page not existing yet!). 
   - Local storage implemented to only show it until it was agreed once and never again, unless local storage is cleared (type "localStorage.clear();" into console of dev tools to reset).
   - With pure CSS multiline truncation inside and "Read more" link.
-  - With "I agree"-button and link to not yet existing (!) data privacy disclaimer page.
-- Feather icons embedded via https://cdn.jsdelivr.net (no icons in use yet, replace JS function renders icons in frontend)
+  - With "I agree"-button and link to (not yet existing!) data privacy disclaimer page.
+- Feather icons embedded via https://cdn.jsdelivr.net (no icons in use yet, replace JS function renders icons in frontend, maybe .svg assets needed?!?)
+- https://strom.international is monitored round the clock by:
+  - Uptimerobot https://uptimerobot.com
+  - Statuscake is watching too: https://app.statuscake.com/
+- We have https://live.browserstack.com/dashboard to test
+- And Lambdatest https://accounts.lambdatest.com does regular screenshots for various platforms to see if layout is not broken on any device
+
+
+### Open points ...
+- Aria roles
+- SEO Description
+- Tab order
+- Content area as layout-option, for sectioned onepage site
+- Direct form button
+- Highlight box?
