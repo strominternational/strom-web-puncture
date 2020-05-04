@@ -29,14 +29,14 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 - Google Analytics
 - Google Tag Manager
 - Hotjar
-- Mixpanel
+- Mixpanel https://mixpanel.com/report/2150585/insights
 - JSless Modals
 - Favicon
 - Preconnect / Prefetch DNS
 - Unsplash mobile first responsive images
 - Responsiveness / Media queries
 - No CSS grid used yet, only flexbox
-- Skeleton CSS framework
+- Skeleton CSS framework http://getskeleton.com/
 - Announcement bottom bar, used for data privacy and cookie agreement (page not existing yet!). 
   - Local storage implemented to only show it until it was agreed once and never again, unless local storage is cleared (type "localStorage.clear();" into console of dev tools to reset).
   - With pure CSS multiline truncation inside and "Read more" link.
@@ -46,7 +46,7 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
   - Uptimerobot https://uptimerobot.com
   - Statuscake is watching too: https://app.statuscake.com/
 - We have https://live.browserstack.com/dashboard to test
-- And Lambdatest https://accounts.lambdatest.com does regular screenshots for various platforms to see if layout is not broken on any device
+- And Lambdatest https://accounts.lambdatest.com does regular screenshots of the skeleton.strom.international branch, for various platforms to see if layout is not broken on any device.
 
 
 ### Open points ...
