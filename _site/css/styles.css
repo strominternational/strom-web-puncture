@@ -22,7 +22,7 @@ mark {
 
 #header {
   display: flex;
-  min-height: 6vh;
+  min-height: 12vh;
   text-align: left;
   /* background: rgb(0, 0, 0); */
   background: linear-gradient(
@@ -65,8 +65,8 @@ mark {
 
 #hero-message {
   display: flex;
-  margin-top: 26vh;
-  z-index: 2;
+  margin-top: 20vh;
+  /* z-index: 2; */
 }
 
 #hero-subtitle {
@@ -465,10 +465,10 @@ input[type="text"]::placeholder {
 
 /* Larger than mobile */
 @media (min-width: 1024px) {
-#header {
-  min-height: 12vh;
-}
-
+  #hero-message {
+    margin-top: 24vh;
+  }
+  
   .benefit-box {
     padding-bottom: 10vh;
   }
@@ -496,11 +496,11 @@ input[type="text"]::placeholder {
   .benefit-box:hover .benefit-content.bene-cont-01 {
     height: 130px;
   }
-  
+
   .benefit-box:hover .benefit-content.bene-cont-02 {
     height: 160px;
   }
-  
+
   .benefit-box:hover .benefit-content.bene-cont-03 {
     height: 100px;
   }
