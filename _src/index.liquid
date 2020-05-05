@@ -24,7 +24,8 @@ Aria-roles for accessibility
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>{{ title }} . User experience research and digital product design agency ...</title>
-    <meta name="description" content="Customer development in a user centric continuous feedback loop. Understand your audience to unlock value with every increment.">
+    <meta name="description"
+        content="Customer development in a user centric continuous feedback loop. Understand your audience to unlock value with every increment.">
     <meta name="author" content="STRØM People Product Process – Fabian Fabain & Jonas Schmidt - Hamburg 2020">
 
     <!-- Mobile Specific Metas
@@ -226,14 +227,17 @@ Aria-roles for accessibility
             </h1>
             <h5 id="hero-subtitle">
                 <mark>
-                    Understand customers to discover business opportunities and add value. Lean, user centric and
-                    research
-                    driven.
+                    Understand customers to discover business opportunities and add value. Stay in the feedback loop. Lean, user
+                    centric and
+                    research driven.
                     <!-- Lean UX and agile product design as a service. -->
                 </mark>
             </h5>
-            <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
-                🚀</a>
+            <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
+                🚀</a> -->
+            <form method="post" id="interest" name="Interest form submitted." netlify>
+                <input type="text" placeholder="How can we reach you?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')"
+                    class="button">Let's talk &nbsp;🚀</a></form>
         </div>
         <div class="row" id="bottom-bar">
             <div onmouseover="mixpanel.track('Hover over benefit 01.')" class="benefit-box one-third column">
@@ -253,9 +257,10 @@ Aria-roles for accessibility
                     <span>opportunities</span>
                 </div>
                 <div class="benefit-content bene-cont-02">
-                    <p><mark>Analysis and interpretation of the collected data give valuable insights into user
+                    <p><mark>Analysis and interpretation of data give valuable insights into user
                             behaviour. </mark></p>
-                    <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to pay for it?</mark></p>
+                    <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to
+                            pay for it?</mark></p>
                 </div>
             </div>
             <div onmouseover="mixpanel.track('Hover over benefit 03.')" class="benefit-box one-third column">
@@ -264,7 +269,8 @@ Aria-roles for accessibility
                     <span class="line l-two">products</span>
                 </div>
                 <div class="benefit-content bene-cont-03">
-                    <mark>Based on the insights, you build and validate business cases for services and applications that add value to users lives, with every increment. </mark>
+                    <mark>Based on the insights, you build and validate business cases for services and applications
+                        that add value to users lives, with every increment. </mark>
                 </div>
             </div>
         </div>
@@ -301,7 +307,8 @@ Aria-roles for accessibility
                             We'll get back to you 🙋
                         </button>
                         <br>
-                        <a onclick="mixpanel.track('Clicked contact close.')" class="close-modal link" href="#close">Close</a>
+                        <a onclick="mixpanel.track('Clicked contact close.')" class="close-modal link"
+                            href="#close">Close</a>
                     </div>
                 </div>
             </form>
@@ -310,7 +317,7 @@ Aria-roles for accessibility
                     ❤️
                     from Hamburg. </p> -->
         </div>
-        <a onclick="mixpanel.track('Clicked outside modal to close.')"  href="#close" class="background"></a>
+        <a onclick="mixpanel.track('Clicked outside modal to close.')" href="#close" class="background"></a>
     </div>
 
     <!-- Hotjar Tracking Code for strom.international
