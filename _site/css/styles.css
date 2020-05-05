@@ -22,9 +22,8 @@ mark {
 
 #header {
   display: flex;
-  min-height: 20vh;
+  min-height: 6vh;
   text-align: left;
-  /* height: 44px; */
   /* background: rgb(0, 0, 0); */
   background: linear-gradient(
     180deg,
@@ -466,6 +465,10 @@ input[type="text"]::placeholder {
 
 /* Larger than mobile */
 @media (min-width: 1024px) {
+#header {
+  min-height: 12vh;
+}
+
   .benefit-box {
     padding-bottom: 10vh;
   }
@@ -539,20 +542,4 @@ input[type="text"]::placeholder {
   #logo {
     font-size: 2.3rem;
   }
-}
-
-/* Larger than phablet */
-@media (min-width: 550px) {
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
 }
