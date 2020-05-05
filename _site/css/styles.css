@@ -114,7 +114,7 @@ mark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 280px;
+  min-width: 300px;
   padding-bottom: 10vh;
 }
 
