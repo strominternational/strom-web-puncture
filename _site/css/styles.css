@@ -464,11 +464,11 @@ input[type="text"]::placeholder {
 }
 
 /* Larger than mobile */
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   #hero-message {
     margin-top: 24vh;
   }
-  
+
   .benefit-box {
     padding-bottom: 10vh;
   }
