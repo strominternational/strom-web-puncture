@@ -31,7 +31,7 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
   - Neon yellow #ffff00
   - Black #000000
 - Google Analytics https://analytics.google.com/analytics/web/#/report-home/a163175793w228483785p215484991
-- Google Tag Manager
+- Google Tag Manager https://tagmanager.google.com/#/container/accounts/6000917115/containers/31061441/workspaces/4
 - Hotjar https://insights.hotjar.com/sites/1748768/dashboard
 - Mixpanel https://mixpanel.com/report/2150585/insights
 - JSless Modals
