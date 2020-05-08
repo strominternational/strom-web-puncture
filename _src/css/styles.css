@@ -1,0 +1,69 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import "output.css";
+
+* {
+  /* border: 1px solid red; */
+}
+
+/* Marked style additions */
+
+marked {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Hero image */
+
+.heroimage {
+}
+
+/* Modal */
+/* .modal {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.22s ease-out;
+  transition: 0.22s ease-out;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  top: 0;
+  left: 0;
+} */
+
+.modal .background {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.modal:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .modal-content {
+  width: 60%;
+  padding: 50px;
+  margin: auto;
+  z-index: 100;
+  background-color: white;
+} */
+
+/* .modal-content p {
+  padding: 20px;
+  border: 1px dotted #ccc;
+  border-radius: 3px;
+  color: #666;
+  font-size: 1.3rem;
+  line-height: 1.4em;
+} */
