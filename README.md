@@ -7,17 +7,21 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 - Pull requests have an automatic netlify deploy preview under a hashed URL per commit that you can look at from the pull request.
   - Once you created the pull request, even if kept open, each push will get it's own deploy preview on push.
 - Lighthouse audit on pull request (https://github.com/jakejarvis/lighthouse-action)
+- Everything described below is currently implemented on the branch "skeleton" that is deployed to https://skeleton.strom.international
 
 ## Working with this repo
-* Checkout
-* run npm install
-* run npx @11ty/eleventy --serve
+* Checkout this repo
+* npm install
+* git checkout skeleton (To switch to the current development branch.)
+* npx @11ty/eleventy --serve (To start Browsersnyc.)
+
+### Tutorials
 * Getting started with eleventy https://www.11ty.dev/docs/getting-started/
 
 ### Basics
 - Source directory: _src
 - Distribution directory: _site
-- Template language .liquid
+- Template language .liquid (or Nunjucks with .njk files if you like to change it)
 - Pure CSS (no preprocessor)
 
 ### Implemented stuff
@@ -26,9 +30,9 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 - Main colors:
   - Neon yellow #ffff00
   - Black #000000
-- Google Analytics
+- Google Analytics https://analytics.google.com/analytics/web/#/report-home/a163175793w228483785p215484991
 - Google Tag Manager
-- Hotjar
+- Hotjar https://insights.hotjar.com/sites/1748768/dashboard
 - Mixpanel https://mixpanel.com/report/2150585/insights
 - JSless Modals
 - Favicon
@@ -45,8 +49,8 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 - https://strom.international is monitored round the clock by:
   - Uptimerobot https://uptimerobot.com
   - Statuscake is watching too: https://app.statuscake.com/
-- We have https://live.browserstack.com/dashboard to test
-- And Lambdatest https://accounts.lambdatest.com does regular screenshots of the skeleton.strom.international branch, for various platforms to see if layout is not broken on any device.
+- We have https://live.browserstack.com/dashboard to test visually manually.
+- Also Lambdatest https://accounts.lambdatest.com does regular screenshots of the skeleton branch (https://skeleton.strom.international), for various platforms to see if layout is not broken on any device.
 
 
 ### Open points ...
