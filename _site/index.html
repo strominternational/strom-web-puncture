@@ -88,7 +88,7 @@ Aria-roles for accessibility
 
         @media (min-width: 640px) {
             #hero {
-                background-image: url('https://source.unsplash.com/collection/620551/1200x800');
+                background-image: url('https://source.unsplash.com/collection/620551/1600x1200');
             }
         }
 
@@ -193,6 +193,34 @@ Aria-roles for accessibility
 
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div id="header" class="section u-full-width">
+        <a onclick="mixpanel.track('Clicked logo.')" href="." id="logo" class="truncate">
+            STRØM . People Product Process
+        </a>
+    </div>
+
+    <section class="hero" id="hero" role="img" aria-label="Image Description">
+        <h1 id="hero-title">
+            <mark>Do users love your product?</mark>
+        </h1>
+        <h5 id="hero-subtitle">
+            <mark>
+                Understand customers to discover business opportunities and add value. Stay in the feedback loop.
+                Lean, user
+                centric and
+                research driven.
+                <!-- Lean UX and agile product design as a service. -->
+            </mark>
+        </h5>
+        <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
+                🚀</a> -->
+        <form method="post" id="interest" name="Interest form submitted." netlify>
+            <input type="text" placeholder="How to contact you ?" required><button type="submit" value="Submit"
+                onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk
+                &nbsp;🚀</a></form>
+    </section>
+
     <div id="announcement" class="announcement multi-truncate invisible">
         <div class="column">
             <input type="checkbox" id="expanded" class="invisible">
@@ -206,63 +234,39 @@ Aria-roles for accessibility
         </div>
         <a onclick="toggleInvisible(event)" class="close-announcement link nowrap" id="close-announcement">I agree</a>
     </div>
-    <div id="header" class="section u-full-width">
-        <a onclick="mixpanel.track('Clicked logo.')" href="." id="logo" class="truncate">
-            STRØM . People Product Process
-        </a>
-    </div>
-    <div class="section" id="hero">
-        <div class="container" id="hero-message">
-            <h1 id="hero-title">
-                <mark>Do users love your product?</mark>
-            </h1>
-            <h5 id="hero-subtitle">
-                <mark>
-                    Understand customers to discover business opportunities and add value. Stay in the feedback loop. Lean, user
-                    centric and
-                    research driven.
-                    <!-- Lean UX and agile product design as a service. -->
-                </mark>
-            </h5>
-            <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
-                🚀</a> -->
-            <form method="post" id="interest" name="Interest form submitted." netlify>
-                <input type="text" placeholder="How can we reach you?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')"
-                    class="button">Let's talk &nbsp;🚀</a></form>
+
+    <div class="row" id="bottom-bar">
+        <div onmouseover="mixpanel.track('Hover over benefit 01.')" class="benefit-box one-third column">
+            <div class="benefit">
+                <span>Validate your</span>
+                <span>market fit</span>
+            </div>
+            <div class="benefit-content bene-cont-01">
+                <p><mark>Targeted user research shows customer pains and needs.</mark></p>
+                <p><mark>Field research, surveys, user safaris and customer interviews yield valuable.</mark>
+                </p>
+            </div>
         </div>
-        <div class="row" id="bottom-bar">
-            <div onmouseover="mixpanel.track('Hover over benefit 01.')" class="benefit-box one-third column">
-                <div class="benefit">
-                    <span>Validate your</span>
-                    <span>market fit</span>
-                </div>
-                <div class="benefit-content bene-cont-01">
-                    <p><mark>Targeted user research shows customer pains and needs.</mark></p>
-                    <p><mark>Field research, surveys, user safaris and customer interviews yield valuable.</mark>
-                    </p>
-                </div>
+        <div onmouseover="mixpanel.track('Hover over benefit 02.')" class="benefit-box one-third column">
+            <div class="benefit">
+                <span>Discover business</span>
+                <span>opportunities</span>
             </div>
-            <div onmouseover="mixpanel.track('Hover over benefit 02.')" class="benefit-box one-third column">
-                <div class="benefit">
-                    <span>Discover business</span>
-                    <span>opportunities</span>
-                </div>
-                <div class="benefit-content bene-cont-02">
-                    <p><mark>Analysis and interpretation of data give valuable insights into user
-                            behaviour. </mark></p>
-                    <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to
-                            pay for it?</mark></p>
-                </div>
+            <div class="benefit-content bene-cont-02">
+                <p><mark>Analysis and interpretation of data give valuable insights into user
+                        behaviour. </mark></p>
+                <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to
+                        pay for it?</mark></p>
             </div>
-            <div onmouseover="mixpanel.track('Hover over benefit 03.')" class="benefit-box one-third column">
-                <div class="benefit">
-                    <span class="line l-one">Build valuable</span>
-                    <span class="line l-two">products</span>
-                </div>
-                <div class="benefit-content bene-cont-03">
-                    <mark>Based on the insights, you build and validate business cases for services and applications
-                        that add value to users lives, with every increment. </mark>
-                </div>
+        </div>
+        <div onmouseover="mixpanel.track('Hover over benefit 03.')" class="benefit-box one-third column">
+            <div class="benefit">
+                <span class="line l-one">Build valuable</span>
+                <span class="line l-two">products</span>
+            </div>
+            <div class="benefit-content bene-cont-03">
+                <mark>Based on the insights, you build and validate business cases for services and applications
+                    that add value to users lives, with every increment. </mark>
             </div>
         </div>
     </div>

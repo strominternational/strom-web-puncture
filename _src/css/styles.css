@@ -1,9 +1,6 @@
-* {
-  /* box-sizing: border-box; */
-}
-
 body {
   font-weight: 600;
+  background: black;
 }
 
 h1,
@@ -24,7 +21,6 @@ mark {
   display: flex;
   min-height: 12vh;
   text-align: left;
-  /* background: rgb(0, 0, 0); */
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -40,7 +36,6 @@ mark {
   position: fixed;
   padding: 16px 16px 16px 22px;
   z-index: 90;
-  /* overflow: hidden; */
 }
 
 #logo {
@@ -49,42 +44,35 @@ mark {
   margin: 0;
   padding: 0;
   font-size: 1.66rem;
-  /* font-size: 2.3rem; */
   color: #ffff00;
   text-decoration: none;
 }
 
 #hero {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  min-height: 100vh;
-  background: no-repeat center center fixed;
   background-size: cover;
-}
-
-#hero-message {
-  display: flex;
-  flex-direction: column;
-  /* align-content: center; */
-  /* align-items: center; */
-  justify-content: flex-end;
-  min-height: 80vh;
-  /* margin-top: 22vh; */
-  z-index: 2;
-}
-
-.container {
-  /* flex-direction: column; */
-  /* align-content: center; */
-  /* align-items: center; */
-
   text-align: center;
+  width: 94vw;
+  min-height: 100vh;
+  /* height: 75vh; If you don't want it to take up the full screen, reduce this number. */
+  /* min-height: 75vh;
+  padding-top: 25vh; */
+  padding-right: 3vw;
+  padding-left: 3vw;
+  overflow: hidden;
+  background: no-repeat center center fixed;
+}
+
+#hero-title {
+  font-size: 4rem;
+  max-width: 90vw;
 }
 
 #hero-subtitle {
-  min-width: 280px;
-  /* max-width: 60vw; */
-  width: 100%;
+  max-width: 80vw;
 }
 
 #bottom-bar {
@@ -324,6 +312,22 @@ form {
   border: 0;
 }
 
+#hero form * {
+  /* width: 100% !important; */
+}
+
+#hero form .button {
+  margin: 0;
+  /* padding: 0; */
+  /* width: 100% !important; */
+  width: 100em;
+}
+
+#hero form input {
+  /* width: max-content; */
+  margin: 0;
+}
+
 input[type="text"] {
   box-sizing: border-box;
   font-weight: 400;
@@ -343,18 +347,24 @@ input[type="text"]::placeholder {
   color: gray;
 }
 
+*::selection {
+  color: black;
+  background-color: magenta;
+}
+
 #hero input {
   /* border: 2px solid #ffff00; */
   border: none;
   height: 50px;
-  width: 220px;
+  width: 240px;
   background: black;
   opacity: 0.75;
   color: white;
 }
 
 #hero input::placeholder {
-  color: grey;
+  color: white;
+  /* font-weight: 400; */
 }
 
 #hero input:focus {
@@ -364,7 +374,7 @@ input[type="text"]::placeholder {
 }
 
 #hero input:focus::placeholder {
-  color: gray;
+  color: #989300;
 }
 
 .invisible {
@@ -499,8 +509,13 @@ input[type="text"]::placeholder {
     padding-bottom: 0;
     flex-wrap: nowrap;
   }
-  #hero-message {
-    min-height: 55vh;
+
+  #hero-title {
+    font-size: 5.5rem;
+  }
+
+  #hero-subtitle {
+    max-width: 70vw;
   }
 
   .benefit-box {
