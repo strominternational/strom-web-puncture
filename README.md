@@ -51,7 +51,6 @@ Technical puncture for a website for our company, based on JAMstack and SSG 11ty
 
 ### Open points ...
 - Aria roles
-- SEO Description
 - Tab order
 - Content area as layout-option, for sectioned onepage site
 - Direct form button
