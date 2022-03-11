@@ -15,6 +15,11 @@ h6 {
 mark {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  box-shadow: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    /* rgba(0, 0, 0, 0.32815132889093135) 25%,*/ rgba(0, 0, 0, 0) 90%
+  );
 }
 
 #header {
@@ -51,16 +56,17 @@ mark {
 #hero {
   /* position: relative; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background-size: cover;
   text-align: center;
-  width: 94vw;
+  /* width: 94vw; */
   min-height: 100vh;
+  height: 100vh;
   /* height: 75vh; If you don't want it to take up the full screen, reduce this number. */
-  /* min-height: 75vh;
-  padding-top: 25vh; */
+  /* min-height: 75vh; */
+  /* padding-top: 20vh; */
   padding-right: 3vw;
   padding-left: 3vw;
   overflow: hidden;
@@ -69,6 +75,7 @@ mark {
 }
 
 #hero-title {
+  margin-top: 22vh;
   font-size: 4rem;
   max-width: 90vw;
   z-index: 1;
@@ -295,8 +302,8 @@ mark {
   background: #ffff00;
   border: 1px solid #ffff00;
   color: black;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  /* margin-top: 40px;
+  margin-bottom: 40px; */
 }
 
 #hero .button:hover {
@@ -552,15 +559,15 @@ input[type="text"]::placeholder {
     transition: 0.125s ease-out;
   }
   .benefit-box:hover .benefit-content.bene-cont-01 {
-    height: 130px;
+    height: 140px;
   }
 
   .benefit-box:hover .benefit-content.bene-cont-02 {
-    height: 160px;
+    height: 140px;
   }
 
   .benefit-box:hover .benefit-content.bene-cont-03 {
-    height: 120px;
+    height: 140px;
   }
 
   .announcement {

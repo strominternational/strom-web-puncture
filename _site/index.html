@@ -1,11 +1,4 @@
 
-<!--
-
-Integrate tabbing order
-Aria-roles for accessibility
-
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,8 +8,7 @@ Aria-roles for accessibility
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
     <title>STRØM . People Product Process . User experience research and digital product design agency ...</title>
-    <meta name="description"
-        content="Customer development in a user centric continuous feedback loop. Understand your audience to unlock value with every increment.">
+    <meta name="description" content="Customer development in a user centric continuous feedback loop. Understand your audience to unlock value with every increment.">
     <meta name="author" content="STRØM People Product Process – Fabian Fabain & Jonas Schmidt - Hamburg 2020">
 
     <!-- Mobile Specific Metas
@@ -25,14 +17,14 @@ Aria-roles for accessibility
 
     <!-- Preconnect external domains
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preconnect" href="https://in.hotjar.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://in.hotjar.com" crossorigin="anonymous">
-    <link rel="preconnect" href="https://ws3.hotjar.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://in.hotjar.com" crossorigin="anonymous" SameSite="None" Secure>
+    <link rel="dns-prefetch" href="https://in.hotjar.com" crossorigin="anonymous" SameSite="None" Secure>
+    <!-- <link rel="preconnect" href="https://ws3.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://ws3.hotjar.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://ws5.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://ws5.hotjar.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://ws11.hotjar.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://ws11.hotjar.com" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="https://ws11.hotjar.com" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://vars.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://vars.hotjar.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://vc.hotjar.io" crossorigin="anonymous">
@@ -47,8 +39,8 @@ Aria-roles for accessibility
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link rel="preconnect" href="https://inspectlet.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://inspectlet.com" crossorigin="anonymous">
+    <!-- <link rel="preconnect" href="https://inspectlet.com" crossorigin="anonymous"> -->
+    <!-- <link rel="dns-prefetch" href="https://inspectlet.com" crossorigin="anonymous"> -->
     <link rel="preconnect" href="https://ws7.hotjar.com" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://ws7.hotjar.com" crossorigin="anonymous">
     <!-- <link rel="preconnect" href="https://hn.inspectlet.com" crossorigin="anonymous"> -->
@@ -59,13 +51,12 @@ Aria-roles for accessibility
     <link rel="dns-prefetch" href="https://source.unsplash.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
-    <link rel="preconnect" href="https://cdn4.mxpnl.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://cdn4.mxpnl.com" crossorigin="anonymous">
+    <!-- <link rel="preconnect" href="https://cdn4.mxpnl.com" crossorigin="anonymous"> -->
+    <!-- <link rel="dns-prefetch" href="https://cdn4.mxpnl.com" crossorigin="anonymous"> -->
 
     <!-- Web fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800;900&family=Abril+Fatface&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800;900&family=Abril+Fatface&display=swap">
 
     <!-- CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -200,9 +191,9 @@ Aria-roles for accessibility
         </a>
     </div>
 
-    <section class="hero" id="hero" role="img" aria-label="Image Description">
+    <section class="hero" id="hero" role="img">
         <h1 id="hero-title">
-            <mark>Do users love your product?</mark>
+            <mark>Users love your product?</mark>
         </h1>
         <h5 id="hero-subtitle">
             <mark>
@@ -215,8 +206,8 @@ Aria-roles for accessibility
         </h5>
         <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
                 🚀</a> -->
-        <form method="post" id="interest" name="Interest form submitted." netlify>
-            <input type="text" placeholder="How to contact you ?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</a></form>
+        <form action="#" method="post" id="interest" name="Interest form submitted." netlify>
+            <input type="text" placeholder="How to contact you ?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</button></form>
     </section>
 
     <div id="announcement" class="announcement multi-truncate invisible">
