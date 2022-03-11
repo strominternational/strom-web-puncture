@@ -12,16 +12,6 @@ h6 {
   font-weight: 800;
 }
 
-mark {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  box-shadow: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    /* rgba(0, 0, 0, 0.32815132889093135) 25%,*/ rgba(0, 0, 0, 0) 90%
-  );
-}
-
 #header {
   display: flex;
   min-height: 12vh;
@@ -48,9 +38,14 @@ mark {
   height: min-content;
   margin: 0;
   padding: 0;
-  font-size: 1.66rem;
+  /* font-size: 1.66rem; */
   color: #ffff00;
   text-decoration: none;
+  font-size: 2.3rem;
+}
+
+#logo:hover {
+  color: white;
 }
 
 #hero {
@@ -600,7 +595,12 @@ input[type="text"]::placeholder {
     margin-bottom: 0;
   }
 
-  #logo {
-    font-size: 2.3rem;
+  mark {
+    padding: 0.5rem 1rem;
   }
+
+  #hero-title mark {
+    padding: 0.5rem 1.5rem;
+  }
+
 }
