@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 ---
 title: "STRØM . People Product Process"
 heroimage: "https://source.unsplash.com/collection/620551/1920x1080"
@@ -8,14 +9,7 @@ heroimage-1600: "https://source.unsplash.com/collection/620551/1600x1200"
 heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
 ---
 
-<!--
 
-Integrate tabbing order
-Aria-roles for accessibility
-
--->
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -225,9 +219,7 @@ Aria-roles for accessibility
         <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
                 🚀</a> -->
         <form method="post" id="interest" name="Interest form submitted." netlify>
-            <input type="text" placeholder="How to contact you ?" required><button type="submit" value="Submit"
-                onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk
-                &nbsp;🚀</a></form>
+            <input type="text" placeholder="How to contact you ?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</button></form>
     </section>
 
     <div id="announcement" class="announcement multi-truncate invisible">
@@ -244,7 +236,7 @@ Aria-roles for accessibility
         <a onclick="toggleInvisible(event)" class="close-announcement link nowrap" id="close-announcement">I agree</a>
     </div>
 
-    <div class="row" id="bottom-bar">
+    <section class="row" id="bottom-bar">
         <div onmouseover="mixpanel.track('Hover over benefit 01.')" class="benefit-box one-third column">
             <div class="benefit">
                 <span>Validate your</span>
@@ -278,7 +270,7 @@ Aria-roles for accessibility
                     that add value to users lives, with every increment. </mark>
             </div>
         </div>
-    </div>
+    </section>
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 

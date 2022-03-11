@@ -49,6 +49,7 @@ mark {
 }
 
 #hero {
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,19 +65,22 @@ mark {
   padding-left: 3vw;
   overflow: hidden;
   background: no-repeat center center fixed;
+  /* z-index: 1; */
 }
 
 #hero-title {
   font-size: 4rem;
   max-width: 90vw;
+  z-index: 1;
 }
 
 #hero-subtitle {
   max-width: 80vw;
+  z-index: 1;
 }
 
 #bottom-bar {
-  position: relative;
+  /* position: relative; */
   text-align: center;
   display: flex;
   flex-wrap: wrap;
@@ -96,6 +100,7 @@ mark {
     rgba(0, 0, 0, 0) 100%
   );
   overflow: hidden;
+  /* z-index: 0; */
 }
 
 .benefit-box {
@@ -310,6 +315,7 @@ form {
   margin: 0;
   padding: 0;
   border: 0;
+  z-index: 2;
 }
 
 #hero form * {
@@ -320,7 +326,7 @@ form {
   margin: 0;
   /* padding: 0; */
   /* width: 100% !important; */
-  width: 100em;
+  width: auto;
 }
 
 #hero form input {
@@ -356,6 +362,7 @@ input[type="text"]::placeholder {
   /* border: 2px solid #ffff00; */
   border: none;
   height: 50px;
+  /* margin: 0; */
   width: 240px;
   background: black;
   opacity: 0.75;
@@ -508,6 +515,8 @@ input[type="text"]::placeholder {
     position: fixed;
     padding-bottom: 0;
     flex-wrap: nowrap;
+    /* z-index: 0; */
+    z-index: 0;
   }
 
   #hero-title {
