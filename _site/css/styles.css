@@ -346,8 +346,8 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-color: #ffff00;
-  background-color: #ffff00;
+  border-color: rgba(255, 255, 0, 1);
+  background-color: hsla(60, 100%, 50%, 1);
 }
 
 input[type="text"]::placeholder {
@@ -367,18 +367,19 @@ input[type="text"]::placeholder {
   /* margin: 0; */
   width: 240px;
   background: black;
-  opacity: 0.75;
+  /* opacity: 0.75; */
   color: white;
 }
 
 #hero input::placeholder {
-  color: white;
+  color: rgba(255, 255, 0, 1);
   /* font-weight: 400; */
 }
 
 #hero input:focus {
-  color: black;
-  background: #ffff00;
+  /* color: black; */
+  background: rgba(255, 255, 0, 1);
+  background: black;
   opacity: 1;
 }
 
@@ -602,5 +603,9 @@ input[type="text"]::placeholder {
   #hero-title mark {
     padding: 0.5rem 1.5rem;
   }
+
+form#interest {
+  margin-top: 3vh;
+}
 
 }

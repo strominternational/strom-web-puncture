@@ -210,7 +210,7 @@
         <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
                 🚀</a> -->
         <form method="post" id="interest" name="Interest form submitted" netlify>
-            <input type="text" placeholder="How to contact you ?" required><button type="submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</button></form>
+            <input name="contact" id="contact" type="text" maxlength="256" placeholder="How to contact you ?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</button></form>
     </section>
 
     <div id="announcement" class="announcement multi-truncate invisible">
