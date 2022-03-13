@@ -26,8 +26,8 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
 
     <!-- Preconnect external domains
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="preconnect" href="https://in.hotjar.com" crossorigin="anonymous" SameSite="None" Secure>
-    <link rel="dns-prefetch" href="https://in.hotjar.com" crossorigin="anonymous" SameSite="None" Secure>
+    <link rel="preconnect" href="https://in.hotjar.com" crossorigin="anonymous" samesite="none" secure>
+    <link rel="dns-prefetch" href="https://in.hotjar.com" crossorigin="anonymous" samesite="none" secure>
     <!-- <link rel="preconnect" href="https://ws3.hotjar.com" crossorigin="anonymous"> -->
     <!-- <link rel="dns-prefetch" href="https://ws3.hotjar.com" crossorigin="anonymous"> -->
     <!-- <link rel="preconnect" href="https://ws5.hotjar.com" crossorigin="anonymous"> -->
@@ -175,7 +175,7 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
 
     <!-- Mixpanel
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script SameSite="False" Secure >(function (c, a) {
+    <script samesite="false" secure >(function (c, a) {
             if (!a.__SV) {
                 var b = window; try { var d, m, j, k = b.location, f = k.hash; d = function (a, b) { return (m = a.match(RegExp(b + "=([^&]*)"))) ? m[1] : null }; f && d(f, "state") && (j = JSON.parse(decodeURIComponent(d(f, "state"))), "mpeditor" === j.action && (b.sessionStorage.setItem("_mpcehash", f), history.replaceState(j.desiredHash || "", c.title, k.pathname + k.search))) } catch (n) { } var l, h; window.mixpanel = a; a._i = []; a.init = function (b, d, g) {
                     function c(b, i) {
@@ -219,7 +219,7 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
         <!-- <a onclick="mixpanel.track('Clicked contact modal button.')" href="#letstalk" class="button">I'm interested
                 🚀</a> -->
         <form method="post" id="interest" name="Interest form submitted" netlify>
-            <input name="contact" id="contact" type="text" maxlength="256" placeholder="How to contact you ?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</button></form>
+            <input name="contact-data" id="contact-data" type="text" maxlength="256" placeholder="How to contact you ?" required><button type="submit" value="Submit" onclick="mixpanel.track('Clicked interest button.')" class="button">Let's talk &nbsp;🚀</button></form>
     </section>
 
     <div id="announcement" class="announcement multi-truncate invisible">
@@ -239,12 +239,11 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
     <section class="row" id="bottom-bar">
         <div onmouseover="mixpanel.track('Hover over benefit 01.')" class="benefit-box one-third column">
             <div class="benefit">
-                <span>Validate your</span>
-                <span>market fit</span>
+                <span>Validate your market fit</span>
             </div>
             <div class="benefit-content bene-cont-01">
                 <p><mark>Targeted user research shows customer pains and needs.</mark></p>
-                <p><mark>Field research, surveys, user safaris and customer interviews yield valuable.</mark>
+                <p><mark>Field research, surveys, user safaris and customer interviews yield valuable insights.</mark>
                 </p>
             </div>
         </div>
@@ -254,9 +253,9 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
                 <span>opportunities</span>
             </div>
             <div class="benefit-content bene-cont-02">
-                <p><mark>Analysis and interpretation of data give valuable insights into user
+                <p><mark>Analysis and interpretation of research data form the understanding of user
                         behaviour. </mark></p>
-                <p><mark>What jobs do users hire your product for? What problem does it solve? Are they willing to
+                <p><mark>What jobs do people hire your product for? What problem does it solve? Are people willing to
                         pay for it?</mark></p>
             </div>
         </div>
@@ -266,8 +265,8 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
                 <span class="line l-two">products</span>
             </div>
             <div class="benefit-content bene-cont-03">
-                <mark>Based on the insights, you build and validate business cases for services and applications
-                    that add value to users lives, with every increment. </mark>
+                <mark>Making informed decisions, you validate and build business cases and from them services and applications
+                    that add value to peoples lives, with every increment.</mark>
             </div>
         </div>
     </section>
@@ -318,7 +317,7 @@ heroimage-1920: "https://source.unsplash.com/collection/620551/1920x1080"
 
     <!-- Hotjar Tracking Code for strom.international
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script SameSite="False" Secure>
+    <script samesite="false" secure>
             (function (h, o, t, j, a, r) {
                 h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
                 h._hjSettings = { hjid: 1748768, hjsv: 6 };

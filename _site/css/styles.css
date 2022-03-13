@@ -1,3 +1,7 @@
+:root {
+  --strm-color-neonyellow: rgba(255, 255, 0, 1);
+}
+
 body {
   font-weight: 600;
   background: black;
@@ -39,7 +43,7 @@ h6 {
   margin: 0;
   padding: 0;
   /* font-size: 1.66rem; */
-  color: #ffff00;
+  color: var( --strm-color-neonyellow );
   text-decoration: none;
   font-size: 2.3rem;
 }
@@ -177,7 +181,7 @@ h6 {
   visibility: hidden;
   opacity: 0;
   /* transition: 1s ease-out; */
-  /* background: #ffff00;
+  /* background: var( --strm-color-neonyellow );
   border-radius: 50%; */
   height: 0px;
   overflow: hidden;
@@ -287,15 +291,15 @@ h6 {
 }
 
 .button:hover {
-  background: #ffff00;
-  border: 1px solid #ffff00;
+  background: var( --strm-color-neonyellow );
+  border: 1px solid var( --strm-color-neonyellow );
   color: black;
 }
 
 #hero .button:focus,
 #hero .button {
-  background: #ffff00;
-  border: 1px solid #ffff00;
+  background: var( --strm-color-neonyellow );
+  border: 1px solid var( --strm-color-neonyellow );
   color: black;
   /* margin-top: 40px;
   margin-bottom: 40px; */
@@ -361,7 +365,7 @@ input[type="text"]::placeholder {
 }
 
 #hero input {
-  /* border: 2px solid #ffff00; */
+  /* border: 2px solid var( --strm-color-neonyellow ); */
   border: none;
   height: 50px;
   /* margin: 0; */
@@ -414,7 +418,7 @@ input[type="text"]::placeholder {
 }
 
 .link:hover {
-  color: #ffff00;
+  color: var( --strm-color-neonyellow );
   background-color: black;
 }
 
@@ -458,13 +462,13 @@ input[type="text"]::placeholder {
 }
 
 .announcement p .link:hover {
-  color: #ffff00;
+  color: var( --strm-color-neonyellow );
   background-color: black;
   padding: 0;
 }
 
 .announcement .close-announcement.link {
-  color: #ffff00;
+  color: var( --strm-color-neonyellow );
   cursor: pointer;
   font-weight: 600;
   margin-top: 25px;
@@ -496,7 +500,7 @@ input[type="text"]::placeholder {
 }
 
 .multi-truncate label:hover {
-  color: #ffff00;
+  color: var( --strm-color-neonyellow );
 }
 
 .multi-truncate input:focus ~ label {
@@ -534,6 +538,11 @@ input[type="text"]::placeholder {
     padding-bottom: 10vh;
   }
 
+  .benefit-box .benefit {
+    width: 75%;
+    text-align: left;
+  }
+
   .benefit-box .benefit-content {
     text-align: left;
     visibility: hidden;
@@ -548,6 +557,7 @@ input[type="text"]::placeholder {
     visibility: visible;
     opacity: 1;
     transition: 0.125s ease-out;
+    overflow-wrap: break-word;
   }
 
   .benefit-box:hover .benefit::before {
@@ -597,11 +607,12 @@ input[type="text"]::placeholder {
   }
 
   mark {
-    padding: 0.5rem 1rem;
+    padding: 0.1em 0;
+    box-shadow: 0.33em 0 0 var(--strm-color-neonyellow), -0.33em 0 0 var(--strm-color-neonyellow); /* add this line */
   }
 
   #hero-title mark {
-    padding: 0.5rem 1.5rem;
+    /* padding: 0.5rem 1.5rem; */
   }
 
 form#interest {
